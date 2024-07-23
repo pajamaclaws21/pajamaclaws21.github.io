@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
 
-div.container {
+body {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+}
+
+div.outerContainer{
+  width: 100%;
+  display: table;
+}
+
+div.innerContainer {
+  display: table-row;
 }
 
 div.header {
