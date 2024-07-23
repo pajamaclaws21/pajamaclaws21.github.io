@@ -64,3 +64,7 @@ li.dropdown:hover {
 li.dropdown:before {
   content: '◢ ';
 }
+
+li.subItem:before {
+  content: '▸';
+}
