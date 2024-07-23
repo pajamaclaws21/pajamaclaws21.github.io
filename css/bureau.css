@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+
+div.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+div.header {
+  background-color: firebrick;
+  color: bisque;
+  padding: 15px;
+  position: relative;
+}
+
+input.searchbar {
+  width: 400px;
+}
+
+div.sidebar {
+  width: 30vw;
+  font-size: 12px;
+}
+
+div.sidebar,
+div.content {
+  padding: 7px;
+  border-style: ridge;
+  height: 100vh;
+  display: table-cell;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 15px;
+  padding-top: 1px;
+}
+
+
+* {
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  display: inline;
+}
+
+a:hover,
+li.dropdown:hover {
+  text-decoration: underline;
+}
+
+li.dropdown:before {
+  content: '◢ ';
+}
