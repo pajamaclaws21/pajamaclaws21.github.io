@@ -1,0 +1,23 @@
+<input id="project" type="file" accept=".xml" />
+<button id="submit" onclick="submitFile()">Submit</button>
+<hr>
+<p id="size"></p>
+<hr>
+<p id="contents"></p>
+
+<script>
+  // rajnishkatharotiya
+  const byteSize = str => new Blob([str]).size;
+
+  function submitFile() {
+    // GeeksForGeeks, "How To Read a Text File in Javascript"
+    let myFile = document.getElementById("project").files[0];
+    let fileReader = new FileReader();
+    fileReader.onload = function () {
+      let x = fileReader.result;
+      document.getElementById('size').textContent = byteSize(x);
+      document.getElementById('contents').textContent = x;
+    };
+    fileReader.readAsText(myFile);
+  }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html style="background-color: Azure;">
+<head>
+    <title>WBIB Viewer</title>
+    <link rel="stylesheet" href="wbib2.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+<input class="site" type="text" id="siteinput" name="siteinput" placeholder="Site">
+<input class="site" type="checkbox" id="useTextise" name="useTextise" style="width: 10px;">
+<iframe id="01"></iframe>
+
+<script>
+var siteinput = document.getElementById("siteinput");
+siteinput.addEventListener("keydown", function (e) {
+  if (e.code === "Enter") {
+    var useTextise = document.getElementById("useTextise").checked;
+    var url = document.getElementById("siteinput").value;
+    if (useTextise) {
+        url = `https://www.textise.net/showText.aspx?strURL=${escape(escape(url))}`;
+    } else {
+        url = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+    }
+    document.getElementById("01").src = url;
+  }
+});
+</script>
+  </body>
+</html>

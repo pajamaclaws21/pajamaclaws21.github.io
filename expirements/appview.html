@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+
+
+	<title>Snap! Viewer</title>
+	<meta name="author" content="pajamaclaws21" />
+	<meta name="description" content="Viewer for 300x400 Snap! Apps" />
+
+	<style>
+		html, body {
+  			height: 100vh;
+  			height: calc(var(--vh, 1vh) * 100);
+		}
+
+		iframe {
+			border: 0px solid black;
+			height: 440px;
+			width: 90vw;
+		}
+		button {
+			width: 45vw;
+			margin-bottom: 5.5px;
+		}
+		button.pause {
+			margin-right: 2vw;
+		}
+		button.go {
+			margin-top: 5.5px;
+			width: 90vw;
+		}
+		input.projName {
+			width: 75vw;
+		}
+		input.uname {
+			width: 25vw;
+			margin-right: 4px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+	  window.addEventListener('message',function(e) {
+		var logs = document.getElementById("logs");
+		var newLogs = JSON.parse(logs.innerText);
+		newLogs.push([e.data.selector, e.data.response]);
+		logs.innerText = JSON.stringify(newLogs);
+	    console.log('the response to', e.data.selector, 'is', e.data.response);
+	  },false);
+  </script>
+</head>
+
+<body>
+
+	<button class="pause" onclick='runApi("togglePauseResume", []);'>Pause</button>
+	<button id="stosta" class="stosta" onclick='stopStart();'>Stop</button>
+	<br>
+	<iframe id="viewer" 
+		allow="geolocation; microphone; camera"
+		sandbox="allow-scripts allow-same-origin"
+		src=""
+		crossorigin="anonymous"
+	></iframe>
+	<br>
+	<input class="uname" id="uname" type="text" placeholder="author" list="authors">
+		<datalist id="authors">
+			<option value="pajamaclaws21">
+		</datalist>
+	<input class="projname" id="projname" type="text" placeholder="project name" list="projects">
+		<datalist id="projects">
+			<option value="Collect Fortune Cookies!">
+			<option value="Map-App">
+			<option value="popBalloons!">
+			<option value="micd out">
+		</datalist>
+	<br>
+	<button class="go" onclick="loadProj(document.getElementById('uname').value, document.getElementById('projname').value)">Go!</button>
+	
+	<div id="logs" hidden>[]</div>
+
+	<script>
+	function loadProj(usn, prn) {
+		let data = "Username=" + usn + "&ProjectName=" + encodeURIComponent(prn);
+		let tags = "&embedMode&noExitWarning&noRun";
+		let mySRC = "https://snap.berkeley.edu/snap.html#present:" + data + tags;
+		document.getElementById('viewer').src = mySRC;
+	}
+
+	loadProj("pajamaclaws21", "Collect Fortune Cookies!");
+
+    function runApi(sel, par) {
+		document.getElementById('viewer').contentWindow.postMessage(
+			{ selector: sel, params: par },
+			'*'
+		);
+    }
+
+	function stopStart() {
+		let button = document.getElementById("stosta");
+		if (button.innerText == "Stop") {
+			runApi("stopAllScripts", []);
+			button.innerText = "Start";
+		} else {
+			runApi("runScripts", []);
+			button.innerText = "Stop";
+		}
+	}
+
+	</script>
+
+</body>
+
+</html>

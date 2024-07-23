@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Bureau Records Database</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://icons.iconarchive.com/icons/icons8/ios7/128/Industry-Biohazard-icon.png"/>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+
+      div.container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      div.header {
+        background-color: firebrick;
+        color: bisque;
+        padding: 15px;
+        position: relative;
+      }
+
+      input.searchbar {
+        width: 400px;
+      }
+
+      div.sidebar {
+        width: 30vw;
+        font-size: 12px;
+      }
+
+      div.sidebar,
+      div.content {
+        padding: 7px;
+        border-style: ridge;
+        height: 100vh;
+        display: table-cell;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 15px;
+        padding-top: 1px;
+      }
+
+
+      * {
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      p {
+        display: inline;
+      }
+
+      a:hover,
+      li.dropdown:hover {
+        text-decoration: underline;
+      }
+
+      li.dropdown:before {
+        content: '◢ ';
+      }
+
+    </style>
+    <script>
+      function makeDropdownsWork() {
+        Array.from(document.getElementsByClassName("dropdown")).forEach((item) => {
+          document.getElementById(item.id).addEventListener("click", function() {
+            let dropdown = document.getElementById(`${this.id}Items`);
+            dropdown.hidden = !(dropdown.hidden);
+          })
+        });
+      }
+      document.addEventListener("DOMContentLoaded", makeDropdownsWork);
+    </script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="header">
+        <p>
+          <i style="font-size: 8px"><a>
+              <-- Back to Portal</a></i> <br>
+          <div style="height: 8px;"></div>
+          <b style="font-size: 24px;">Bureau of Timespace Regulation Records Database</b><br>
+          <div style="height: 10px;"></div>
+          Search <input class="searchbar"> (?) <a style="font-size: 12px;">[ Advanced Search ]</a>
+        </p>
+      </div>
+
+      <div style="width: 100%; display: table;">
+        <div style="display: table-row">
+
+          <div class="sidebar">
+            <ul>
+              <li id="personnel" class="dropdown"><b>Personnel Records</b></li>
+              <ul id="personnelItems" hidden>
+                <li>Digitization Update</li>
+              </ul>
+
+              <li id="tribunal" class="dropdown"><b>Tribunal Records</b></li>
+              <ul id="tribunalItems" hidden>
+                <li>Preceding Era 1</li>
+                <li id="eraOne" class=dropdown>Era 1</li>
+                <ul id="eraOneItems" hidden>
+                  <li>...</li>
+                </ul>
+              </ul>
+
+            </ul>
+          </div>
+
+          <div class="content">
+            <p>Content viewer</p>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </body>
+
+</html>
