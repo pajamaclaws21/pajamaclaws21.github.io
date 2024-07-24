@@ -56,6 +56,15 @@ p {
   display: inline;
 }
 
+p.body {
+  font-size: 12px;
+}
+
+p.heading, li.dropdown {
+  font-size: 16px;
+  font-weight: 700;
+}
+
 a:hover,
 li.dropdown:hover {
   text-decoration: underline;
