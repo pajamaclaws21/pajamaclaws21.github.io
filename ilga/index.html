@@ -10,7 +10,7 @@
         let viewer = document.getElementById("viewer");
 
         function click() {
-            console.log(sitemap.contentWindow)
+            console.log(sitemap.contentWindow.location.href)
         }
 
         document.getElementById("sitemap").addEventListener("load", click);
@@ -22,7 +22,7 @@
 div class="body">
     <iframe id="viewer" class="viewer"></iframe>
     <iframe id="sitemap" class="sitemap"
-      src="/ilga-sitemap.html">
+      src="https://pajamaclaws21.github.io/ilga/ilga-sitemap.html">
     </iframe>
 </div>
 
