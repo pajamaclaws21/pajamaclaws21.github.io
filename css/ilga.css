@@ -4,7 +4,7 @@ div.body {
     left: 0;
     right: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
+    position: relative;
     background-color: firebrick;
   
     height: 100vh;
@@ -36,6 +36,7 @@ div.body {
     height: 60vh;
   }
   
-  iframe.sitemap {
+  div.sitemap {
     height: 30vh;
+    overflow: scroll;
   }
