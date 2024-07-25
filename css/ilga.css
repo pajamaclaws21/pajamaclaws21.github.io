@@ -43,5 +43,11 @@ div.body {
 
   a {
     text-decoration: underline;
-    text-color: blue;
+    text-decoration-style: dotted;
+    color: MediumSlateBlue;
+  }
+
+  a:hover {
+    color: DarkSlateBlue;
+    text-decoration-style: solid;
   }
