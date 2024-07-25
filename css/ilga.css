@@ -4,7 +4,6 @@ div.body {
     left: 0;
     right: 0;
     overflow-x: hidden;
-    position: relative;
     background-color: firebrick;
   
     height: 100vh;
