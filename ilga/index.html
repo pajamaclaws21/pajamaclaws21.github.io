@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ILGA Viewer</title>
+	<link rel="icon" type="image/x-icon" href="https://pajamaclaws21.github.io/images/pj.ico">
+	<link rel="stylesheet" href="https://pajamaclaws21.github.io/css/ilga.css">
+    <script>
+        let sitemap = document.getElementById("sitemap");
+        let viewer = document.getElementById("viewer");
+
+        function click() {
+            console.log(sitemap.contentWindow)
+        }
+
+        document.getElementById("sitemap").addEventListener("load", click);
+    </script>
+</head>
+<body>
+
+
+div class="body">
+    <iframe id="viewer" class="viewer"></iframe>
+    <iframe id="sitemap" class="sitemap"
+      src="/ilga-sitemap.html">
+    </iframe>
+</div>
+
+</body>
+</html>
