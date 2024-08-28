@@ -71,12 +71,12 @@ li.insideDD:hover {
   text-decoration: underline;
 }
 
-li.dropdown:before,
-li.insideDD:before {
+li.dropdown:before {
   content: '◢ ';
 }
 
-li.subItem:before {
+li.subItem:before,
+li.insideDD:before {
   content: '▸';
 }
 
