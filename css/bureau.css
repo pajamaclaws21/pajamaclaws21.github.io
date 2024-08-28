@@ -66,11 +66,13 @@ p.heading, li.dropdown {
 }
 
 a:hover,
-li.dropdown:hover {
+li.dropdown:hover,
+li.insideDD:hover {
   text-decoration: underline;
 }
 
-li.dropdown:before {
+li.dropdown:before,
+li.insideDD:before {
   content: '◢ ';
 }
 
