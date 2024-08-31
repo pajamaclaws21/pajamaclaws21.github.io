@@ -1,10 +1,25 @@
-let posts = ['/blog/entry2', '/blog/entry1'];
+var postCount = 2;
+var posts = [];
+
+function localizePosts() {
+    // Change this so it works w Netlify
+    for (let i = 0; i < postCount; i++) {
+        posts[i] = `https://pajamaclaws21.github.io/blog/entry${i}`;
+    }
+}
+
+function onlyFromClass(name) {
+    document.getElementsByClassName(name)[0];
+}
 
 function makeAutobloggingWork() {
-  var div = document.getElementsByClassName('content')[0];
+  var div = onlyFromClass("content");
+  var sidebar = onlyFromClass("sidebar");
 
-  posts.forEach((post, index, array) => {
-    fetch(post).then(response => response.text())
+  localizePosts()
+
+  posts.forEach((url, index, array) => {
+    fetch(url).then(response => response.text())
       .then(response => {
         response = response.split("\n--\n");
 
@@ -24,7 +39,7 @@ function makeAutobloggingWork() {
         entry = [entryHeading, br(), content, br(), br(), br(), br()];
         entry.forEach(item => { div.appendChild(item) });
 
-        document.getElementById('sidebar').innerHTML += `<li><a href="#entry${index}">${response[0].split(" (")[0]}</a></li>`;
+        sidebar.innerHTML += `<li><a href="#entry${index}">${response[0].split(" (")[0]}</a></li>`;
 
       }).catch(err => console.log(err));
   });
