@@ -1,26 +1,31 @@
 let posts = ['/blog/entry2', '/blog/entry1'];
-var div = document.getElementsByClassName('content')[0];
 
-posts.forEach((post, index, array) => {
-  fetch(post).then(response => response.text())
-    .then(response => {
-      response = response.split("\n--\n");
+function makeAutobloggingWork() {
+  var div = document.getElementsByClassName('content')[0];
 
-      var br, entryHeading, content, entry;
+  posts.forEach((post, index, array) => {
+    fetch(post).then(response => response.text())
+      .then(response => {
+        response = response.split("\n--\n");
 
-      br = () => document.createElement("br");
+        var br, entryHeading, content, entry;
 
-      entryHeading = document.createElement("p");
-      entryHeading.id =  `entry${index}`;
-      entryHeading.class = "heading";
-      entryHeading.innerText = response[0];
+        br = () => document.createElement("br");
 
-      content = document.createElement("p");
-      content.class = "body";
-      content.innerHTML = response[1];
+        entryHeading = document.createElement("p");
+        entryHeading.id = `entry${index}`;
+        entryHeading.class = "heading";
+        entryHeading.innerText = response[0];
 
-      entry = [entryHeading, br(), content, br(), br(), br(), br()];
-      entry.forEach(item => {div.appendChild(item)});
+        content = document.createElement("p");
+        content.class = "body";
+        content.innerHTML = response[1];
 
-    }).catch(err => console.log(err));
-});
+        entry = [entryHeading, br(), content, br(), br(), br(), br()];
+        entry.forEach(item => { div.appendChild(item) });
+
+      }).catch(err => console.log(err));
+  });
+}
+
+document.addEventListener("DOMContentLoaded", makeAutobloggingWork);
