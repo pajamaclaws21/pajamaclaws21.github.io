@@ -24,6 +24,8 @@ function makeAutobloggingWork() {
         entry = [entryHeading, br(), content, br(), br(), br(), br()];
         entry.forEach(item => { div.appendChild(item) });
 
+        document.getElementById('sidebar').innerHTML += `<li><a href="#entry${index}">${response[0].split(" (")[0]}</a></li>`;
+
       }).catch(err => console.log(err));
   });
 }
