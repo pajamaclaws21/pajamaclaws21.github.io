@@ -4,12 +4,12 @@ var posts = [];
 function localizePosts() {
     // Change this so it works w Netlify
     for (let i = 0; i < postCount; i++) {
-        posts[i] = `https://pajamaclaws21.github.io/blog/entry${i}`;
+        posts[i] = `https://pajamaclaws21.github.io/blog/entry${i + 1}`;
     }
 }
 
 function onlyFromClass(name) {
-    document.getElementsByClassName(name)[0];
+    return document.getElementsByClassName(name)[0];
 }
 
 function makeAutobloggingWork() {
