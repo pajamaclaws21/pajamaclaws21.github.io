@@ -31,11 +31,11 @@ function makeAutobloggingWork() {
 
         entryHeading = document.createElement("p");
         entryHeading.id = `entry${index}`;
-        entryHeading.class = "heading";
+        entryHeading.className = "heading";
         entryHeading.innerText = response[0];
 
         content = document.createElement("p");
-        content.class = "body";
+        content.className = "body";
         content.innerHTML = response[1];
 
         entry = [entryHeading, br(), content, br(), br(), br(), br()];
