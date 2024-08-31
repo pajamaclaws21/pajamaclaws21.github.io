@@ -6,8 +6,8 @@ function localizePosts() {
     for (let i = 0; i < postCount; i++) {
         posts[i] = `https://pajamaclaws21.github.io/blog/entry${i + 1}`;
     };
-    
-    posts = post.reverse();
+
+    posts = posts.reverse();
 }
 
 function onlyFromClass(name) {
