@@ -1,0 +1,15 @@
+Entry 3 (8/31/24)
+--
+JEEZ, today was a big day for the blog page. I successfully made this shit programatic, baybeeeee! I'm calling it "autoblogging," and you can find the code for it at <a href="/src/autoblog.js">autoblog.js</a> on this very site. It took me a while to write, and thank god for <a href="jsitor.com">JSitor</a>, or else I wouldn't've made it through. Here's the gist of what it does, with bad grammar in terms of parentheses and quotes so the code I mention here could work.
+<br><br>
+<b>Step 1: Find Posts</b>
+First, I have to create a list of post locations. All of my blog posts are stored in separate files in the /blog folder of my site (for example /blog/entry1, /blog/entry2, and so on and so forth), so I first run a loop to create the URLs that I need to fetch. It's not that bad, just a for-loop and a template literal. This is done in a function called "localizePosts()".
+<br><br>
+<b>Step 2: Fetching & Parsing</b>
+As simple as it sounds. After the post list is created, I can simply fetch the raw content of each post. Each of my entry files is of the format "Name\n--\nContent", so if I split the raw text by "\n--\n", I get a simple list of both name and content, and I can move on.
+<br><br>
+<b>Step 3: Element Creation</b>
+This step is tedious, but not horrible. I create 2 elements for each entry: a heading element and a body text element. I add some brs with my br() function (lambda line break maker!! woot woot), put it all in an array, and add it to the content div. Then, I use a template literal to add each entry to the sidebar. I'd put the code for that here but any HTML renders :( it's a good choice overall because it means I don't have to break my back styling in JavaScript, but still a little frustrating. It's just a list element, with the text being the first element of the list I got at step 2 (but split from the date of course) and the link being the entry number (which I got when fetching).
+<br><br>
+<b>Was it worth it?</b>
+Yes. It's a great system and it works really well for me, it enabled me to write this super simply without having to have a super long-ass site. Although I can't write HTML code in it, it's really good so far. (I will have to look into putting HTML code here.) I'm considering moving the blog page (/blog.html) to the blog folder (/blog), too. It gave me an excuse to practice my JavaScript skills and fix an issue that would've gotten significantly worse (probably) if I were to add more entries. So yeah. Would recommend :thumbsup:
