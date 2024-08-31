@@ -1,10 +1,10 @@
-var postCount = 2;
+var postCount = 3;
 var posts = [];
 
 function localizePosts() {
     // Change this so it works w Netlify
-    for (let i = 0; i < postCount; i++) {
-        posts[i] = `https://pajamaclaws21.github.io/blog/entry${i + 1}`;
+    for (let i = postCount; i > 0; i--) {
+        posts[i + 1] = `https://pajamaclaws21.github.io/blog/entry${i}`;
     };
 
     posts = posts.reverse();
@@ -25,12 +25,13 @@ function makeAutobloggingWork() {
       .then(response => {
         response = response.split("\n--\n");
 
-        var br, entryHeading, content, entry;
+        var br, entryNum, entryHeading, content, entry;
 
         br = () => document.createElement("br");
+        entryNum = url.split("entry")[1];
 
         entryHeading = document.createElement("p");
-        entryHeading.id = `entry${index}`;
+        entryHeading.id = `entry${entryNum}`;
         entryHeading.className = "heading";
         entryHeading.innerText = response[0];
 
@@ -41,7 +42,7 @@ function makeAutobloggingWork() {
         entry = [entryHeading, br(), content, br(), br(), br(), br()];
         entry.forEach(item => { div.appendChild(item) });
 
-        sidebar.innerHTML += `<li><a href="#entry${index}">${response[0].split(" (")[0]}</a></li>`;
+        sidebar.innerHTML += `<li><a href="#entry${entryNum}">${response[0].split(" (")[0]}</a></li>`;
 
       }).catch(err => console.log(err));
   });
