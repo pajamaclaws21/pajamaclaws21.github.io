@@ -5,7 +5,9 @@ function localizePosts() {
     // Change this so it works w Netlify
     for (let i = 0; i < postCount; i++) {
         posts[i] = `https://pajamaclaws21.github.io/blog/entry${i + 1}`;
-    }
+    };
+    
+    posts = post.reverse();
 }
 
 function onlyFromClass(name) {
@@ -14,7 +16,7 @@ function onlyFromClass(name) {
 
 function makeAutobloggingWork() {
   var div = onlyFromClass("content");
-  var sidebar = onlyFromClass("sidebar");
+  var sidebar = document.getElementById("entriesItems");
 
   localizePosts()
 
