@@ -11,6 +11,10 @@
     "icons": [
         {
             "src": "https://pajamaclaws21.github.io/images/pj.ico",
+            "sizes": "16x16"
+        },
+        {
+            "src": "https://pajamaclaws21.github.io/images/pajamaclaws21.png",
             "sizes": "512x512"
         }
     ]
