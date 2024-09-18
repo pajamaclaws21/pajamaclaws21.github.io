@@ -1,0 +1,17 @@
+{
+    "name": "Pajamaclaws21",
+    "short_name": "PJ21",
+    "theme_color": "#2196f3",
+    "background_color": "#2196f3",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "https://pajamaclaws21.github.io",
+    "description": "the pj21 site with all my stuff",
+    "icons": [
+        {
+            "src": "https://pajamaclaws21.github.io/images/pj.ico",
+            "sizes": "16x16"
+        }
+    ]
+  }
