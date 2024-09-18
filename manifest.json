@@ -1,8 +1,8 @@
 {
     "name": "Pajamaclaws21",
     "short_name": "PJ21",
-    "theme_color": "#2196f3",
-    "background_color": "#2196f3",
+    "theme_color": "#F2D2BD",
+    "background_color": "#B22222",
     "display": "fullscreen",
     "orientation": "portrait",
     "scope": "/",
