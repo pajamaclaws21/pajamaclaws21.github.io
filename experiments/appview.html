@@ -19,19 +19,8 @@
 
 		iframe {
 			border: 0px solid black;
+			height: 440px;
 			width: 90vw;
-		}
-		
-		@media (orientation: landscape) {
-			iframe{
-				height: 440px;
-			}
-		}
-
-		@media (orientation: landscape) {
-			iframe {
-				height: 100px;
-			}
 		}
 
 		button {
@@ -93,6 +82,8 @@
 		</datalist>
 	<br>
 	<button class="go" onclick="loadProj(document.getElementById('uname').value, document.getElementById('projname').value)">Go!</button>
+
+	<!-- Option to toggle a "landscape mode" for viewer, pq it doesnt work for roadmap -->
 	
 	<div id="logs" hidden>[]</div>
 
