@@ -19,9 +19,21 @@
 
 		iframe {
 			border: 0px solid black;
-			height: 440px;
 			width: 90vw;
 		}
+		
+		@media (orientation: landscape) {
+			iframe{
+				height: 440px;
+			}
+		}
+
+		@media (orientation: landscape) {
+			iframe {
+				height: 100px;
+			}
+		}
+
 		button {
 			width: 45vw;
 			margin-bottom: 5.5px;
@@ -85,8 +97,6 @@
 	<div id="logs" hidden>[]</div>
 
 	<script>
-	screen.orientation.lock("landscape");
-
 	function loadProj(usn, prn) {
 		let data = "Username=" + usn + "&ProjectName=" + encodeURIComponent(prn);
 		let tags = "&embedMode&noExitWarning&noRun";
