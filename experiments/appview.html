@@ -85,6 +85,8 @@
 	<div id="logs" hidden>[]</div>
 
 	<script>
+	screen.orientation.lock("landscape");
+
 	function loadProj(usn, prn) {
 		let data = "Username=" + usn + "&ProjectName=" + encodeURIComponent(prn);
 		let tags = "&embedMode&noExitWarning&noRun";
