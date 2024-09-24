@@ -96,17 +96,17 @@
       let landscape = (document.getElementById("landscape?").innerText != 'false');
     
       if (landscape) {
-				document.getElementById("viewer").style.height = '440px';
-				document.getElementById("footer-toggle").hidden = false;
-				document.getElementById("header-toggle").hidden = true;
-				document.getElementById("header-br").hidden = true;
-        document.getElementById("landscape?").innerText = "false";
+			document.getElementById("viewer").style.height = '440px';
+			document.getElementById("footer-toggle").hidden = false;
+			document.getElementById("header-toggle").hidden = true;
+			document.getElementById("header-br").hidden = true;
+        	document.getElementById("landscape?").innerText = "false";
       } else {
-        document.getElementById("viewer").style.height = '250px';
-        document.getElementById("footer-toggle").hidden = true;
-				document.getElementById("header-toggle").hidden = false;
-				document.getElementById("header-br").hidden = false;
-				document.getElementById("landscape?").innerText = "true";
+        	document.getElementById("viewer").style.height = '300px';
+			document.getElementById("footer-toggle").hidden = true;
+			document.getElementById("header-toggle").hidden = false;
+			document.getElementById("header-br").hidden = false;
+			document.getElementById("landscape?").innerText = "true";
       }
     }
 
