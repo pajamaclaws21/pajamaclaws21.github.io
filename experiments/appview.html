@@ -11,15 +11,15 @@
 	<meta name="description" content="Viewer for 300x400 Snap! Apps" />
 
 	<style>
-		html, body {
-  			height: 100vh;
-  			height: calc(var(--vh, 1vh) * 100);
+		html,
+		body {
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
 			overflow: hidden;
 		}
 
 		iframe {
 			border: 0px solid black;
-			height: 440px;
 			width: 90vw;
 		}
 
@@ -27,68 +27,90 @@
 			width: 45vw;
 			margin-bottom: 5.5px;
 		}
+
 		button.pause {
 			margin-right: 2vw;
 		}
-		button.go {
+
+		button.go, button.toggle {
 			margin-top: 5.5px;
 			width: 90vw;
 		}
+
 		input.projName {
 			width: 75vw;
 		}
+
 		input.uname {
 			width: 25vw;
 			margin-right: 4px;
 		}
 	</style>
 	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <script>
-	  window.addEventListener('message',function(e) {
+	<script>
+		window.addEventListener('message',function(e) {
 		var logs = document.getElementById("logs");
 		var newLogs = JSON.parse(logs.innerText);
 		newLogs.push([e.data.selector, e.data.response]);
 		logs.innerText = JSON.stringify(newLogs);
 	    console.log('the response to', e.data.selector, 'is', e.data.response);
 	  },false);
-  </script>
+	</script>
+
 </head>
 
 <body>
+	<button id="header-toggle" class="toggle" onclick="toggle()" hidden>toggle display</button>
+  <br id="header-br" hidden>
 
 	<button class="pause" onclick='runApi("togglePauseResume", []);'>Pause</button>
 	<button id="stosta" class="stosta" onclick='stopStart();'>Stop</button>
 	<br>
-	<iframe id="viewer" 
-		allow="geolocation; microphone; camera"
-		sandbox="allow-scripts allow-same-origin"
-		src=""
-		crossorigin="anonymous"
-	></iframe>
+	<iframe id="viewer" style="height: 440px" allow="geolocation; microphone; camera" sandbox="allow-scripts allow-same-origin" src=""
+		crossorigin="anonymous"></iframe>
 	<br>
 	<input class="uname" id="uname" type="text" placeholder="author" list="authors">
-		<datalist id="authors">
-			<option value="pajamaclaws21">
-		</datalist>
+	<datalist id="authors">
+		<option value="pajamaclaws21">
+	</datalist>
 	<input class="projname" id="projname" type="text" placeholder="project name" list="projects">
-		<datalist id="projects">
-			<option value="Collect Fortune Cookies!">
-			<option value="Map-App">
-			<option value="popBalloons!">
-			<option value="micd out">
-			<option value="tarot">
-			<option value="SnapGPT">
-			<option value="roadmap">
-		</datalist>
+	<datalist id="projects">
+		<option value="Collect Fortune Cookies!">
+		<option value="Map-App">
+		<option value="popBalloons!">
+		<option value="micd out">
+		<option value="tarot">
+		<option value="SnapGPT">
+		<option value="roadmap">
+	</datalist>
 	<br>
 	<button class="go" onclick="loadProj(document.getElementById('uname').value, document.getElementById('projname').value)">Go!</button>
-
-	<!-- Option to toggle a "landscape mode" for viewer, pq it doesnt work for roadmap -->
-	
 	<div id="logs" hidden>[]</div>
 
+  <button id="footer-toggle" class="toggle" onclick="toggle()">toggle display</button>
+  <div id="landscape?" hidden>false</div>
+
+
 	<script>
-	function loadProj(usn, prn) {
+    function toggle(){
+      let landscape = (document.getElementById("landscape?").innerText != 'false');
+    
+      if (landscape) {
+				document.getElementById("viewer").style.height = '440px';
+				document.getElementById("footer-toggle").hidden = false;
+				document.getElementById("header-toggle").hidden = true;
+				document.getElementById("header-br").hidden = true;
+        document.getElementById("landscape?").innerText = "false";
+      } else {
+        document.getElementById("viewer").style.height = '250px';
+        document.getElementById("footer-toggle").hidden = true;
+				document.getElementById("header-toggle").hidden = false;
+				document.getElementById("header-br").hidden = false;
+				document.getElementById("landscape?").innerText = "true";
+      }
+    }
+
+		function loadProj(usn, prn) {
 		let data = "Username=" + usn + "&ProjectName=" + encodeURIComponent(prn);
 		let tags = "&embedMode&noExitWarning&noRun";
 		let mySRC = "https://snap.berkeley.edu/snap.html#present:" + data + tags;
