@@ -4,12 +4,18 @@
     <title>Poem</title>
     <link rel="stylesheet" href="https://pajamaclaws21.github.io/css/poetry.css">
     <link rel="manifest" href="https://pajamaclaws21.github.io/manifest.json">
+    <!-- 
+      Goal:
+        Like autoblog, do an autopoem.
+        Have files for each poem: Name \n--\n Auth \n--\n Body
+        Display them on this page with magic JavaScript
+    -->
   </head>
 <body>
   <a class="back" href="/poetry">back</a>
-  <p class="title">poem</p>
-  <p class="subtitle">by author</p>
-  <p class="body">
+  <p class="title" id="title">poem</p>
+  <p class="subtitle" id="author">by author</p>
+  <p class="body" id="body">
     Line 1... <br>
     line 2.
   </p>
