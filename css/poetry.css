@@ -5,8 +5,7 @@
 }
 
 body {
-  /* Background from background-tiles.com -- orange circles pattern 19. */
-  background-image: url('https://pajamaclaws21.github.io/images/poem-background.png');
+  background-image: url('https://background-tiles.com/overview/orange/patterns/large/1019.png');
 }
 
 p.title {
@@ -30,26 +29,46 @@ p.body {
   margin-left: 2.5%;
 }
 
+ul {
+  margin-top: 0;
+  list-style: '-> ';
+}
+
+li {
+  margin-top: 0;
+  font-weight: 200;
+  font-size: 16px;
+}
+
 a {
-  font-size: 12px;
+  color: black;
   text-decoration: none;
 }
 
 a:hover {
+  text-decoration: underline;
+}
+
+a.back {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+a.back:hover {
   color: burlywood;
   text-decoration: underline;
 }
 
-/* detect mobile */
+/* touch screen */
 @media (any-pointer: coarse) {
-    a {
+    a.back {
         color:burlywood; 
     }
 }
 
-/* detect non mobile */
+/* no touch screen */
 @media (any-pointer: fine) {
-    a {
+    a.back {
         color:antiquewhite; 
     }
 }
