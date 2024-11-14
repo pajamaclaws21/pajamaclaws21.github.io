@@ -4,12 +4,18 @@
     <title>Poem</title>
     <link rel="stylesheet" href="https://pajamaclaws21.github.io/css/poetry.css">
     <link rel="manifest" href="https://pajamaclaws21.github.io/manifest.json">
-    <!-- 
-      Goal:
-        Like autoblog, do an autopoem.
-        Have files for each poem: Name \n--\n Auth \n--\n Body
-        Display them on this page with magic JavaScript
-    -->
+    <script>
+      let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
+      let url = `https://pajamaclaws21.github.io/poetry/raw/${poem}`;
+
+      fetch(url).then(response => response.text())
+        .then(response => {
+            response = response.split("\n--\n");
+            document.getElementById("title").innerText = response[0];
+            document.getElementById("author").innerText = response[1];
+            document.getElementById("body").innerHTML = response[2].replaceAll("\n", "<br>");
+        });
+    </script>
   </head>
 <body>
   <a class="back" href="/poetry">back</a>
