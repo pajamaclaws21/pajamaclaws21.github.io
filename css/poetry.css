@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  font-family: Inter;
+}
+
+body {
+  /* Background from background-tiles.com -- orange circles pattern 19. */
+  background-image: url('https://pajamaclaws21.github.io/images/poem-background.png');
+}
+
+p.title {
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 2.5%;
+  margin-bottom: 0;
+  margin-left: 2.5%;
+}
+
+p.subtitle {
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 24px;
+  margin-left: 2.5%;
+}
+
+p.body {
+  font-weight: 200;
+  font-size: 18px;
+  margin-left: 2.5%;
+}
+
+a {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: burlywood;
+  text-decoration: underline;
+}
+
+/* detect mobile */
+@media (any-pointer: coarse) {
+    a {
+        color:burlywood; 
+    }
+}
+
+/* detect non mobile */
+@media (any-pointer: fine) {
+    a {
+        color:antiquewhite; 
+    }
+}
