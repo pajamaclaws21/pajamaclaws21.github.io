@@ -30,6 +30,20 @@ p.body {
   margin-left: 2.5%;
 }
 
+hr {
+  margin-top: 40%;
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+p.small {
+  font-weight: 300;
+  font-size: 12px;
+  margin-left: 2.5%;
+  margin-top: 0;
+}
+
 ul {
   margin-top: 0;
   list-style: '-> ';

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Poem</title>
-    <link rel="stylesheet" href="https://pajamaclaws21.github.io/css/poetry.css">
-    <link rel="manifest" href="https://pajamaclaws21.github.io/manifest.json">
-    <script>
-      // Get the poem URL parameter & make the url
+
+<head>
+	<title>Poem</title>
+	<link rel="manifest" href="https://pajamaclaws21.github.io/manifest.json">
+	<script>
+		  // Get the poem URL parameter & make the url
       let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
       let url = `https://pajamaclaws21.github.io/poetry/raw/${poem}`;
 
@@ -16,16 +16,25 @@
             document.getElementById("title").innerText = response[0];
             document.getElementById("author").innerText = response[1];
             document.getElementById("body").innerHTML = response[2].replaceAll("\n", "<br>");
+            if (response[3]){
+              document.getElementById("commentary").innerHTML = response[3];
+              document.getElementById("commentary").hidden = false;
+              document.getElementById("line").hidden = false;
+            }
         });
-    </script>
-  </head>
+	</script>
+</head>
+
 <body>
-  <a class="back" href="/poetry">back</a>
-  <p class="title" id="title">poem</p>
-  <p class="subtitle" id="author">by author</p>
-  <p class="body" id="body">
-    Line 1... <br>
+	<a class="back" href="/poetry">back</a>
+	<p class="title" id="title">poem</p>
+	<p class="subtitle" id="author">by author</p>
+	<p class="body" id="body">
+		Line 1... <br>
     line 2.
   </p>
+  <hr id="line" hidden>
+  <p class="small" id="commentary" hidden></p>
 </body>
+
 </html>
