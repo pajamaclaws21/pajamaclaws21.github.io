@@ -2,7 +2,6 @@ var postCount = 4;
 var posts = [];
 
 function localizePosts() {
-    // Change this so it works w Netlify
     for (let i = postCount; i > 0; i--) {
         posts[i + 1] = `https://pajamaclaws21.github.io/blog/entry${i}`;
     };
