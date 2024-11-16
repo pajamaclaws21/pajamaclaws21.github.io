@@ -41,6 +41,7 @@ p.small {
   font-weight: 300;
   font-size: 12px;
   margin-left: 2.5%;
+  margin-right: 2.5%;
   margin-top: 0;
 }
 
@@ -90,11 +91,11 @@ a.back:hover {
 
 /* Indent classes */
 id1 {
-  margin-left: 5%;
+  margin-left: 3%;
 }
 id2 {
-  margin-left: 10%;
+  margin-left: 6%;
 }
 id3 {
-  margin-left: 15%;
+  margin-left: 9%;
 }
