@@ -40,9 +40,7 @@ hr {
 p.small {
   font-weight: 300;
   font-size: 12px;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-  margin-top: 2.5%;
+  margin: 1%;
 }
 
 ul {
