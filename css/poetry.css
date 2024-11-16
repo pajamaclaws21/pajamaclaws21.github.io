@@ -87,3 +87,14 @@ a.back:hover {
         color:antiquewhite; 
     }
 }
+
+/* Indent classes */
+id1 {
+  margin-left: 5%;
+}
+id2 {
+  margin-left: 10%;
+}
+id3 {
+  margin-left: 15%;
+}

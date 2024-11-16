@@ -25,9 +25,9 @@ Abierto los poros no retengo el alma.
 
 ¡Oh lástima, lástima!
 Tanta primavera que no logra taza
-  Para ser bebida.
+  <id1>Para ser bebida.</id1>
 Tanta primavera que no logra llama
-  Para ser quemada.
+  <id1>Para ser quemada.</id1>
 
 Tú ¿dónde te ocultas, tú, que nos has logrado
 Todavía telas, redes, cribas, mallas,
@@ -70,9 +70,9 @@ open pores. I do not hold back the soul.
 
 Oh, pity, pity!
 So much spring that fails to achieve the cup
-  To be drunk.
+  <id1>To be drunk.</id1>
 So much spring that does not achieve the flame
-  To be burned.
+  <id1>To be burned.</id1>
 
 You, where do you hide, you, who still haven't
 the cloths, nets, sieves, meshes
