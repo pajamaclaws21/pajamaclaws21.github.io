@@ -2,12 +2,12 @@ The Love Song of J. Alfred Prufrock
 --
 T.S. Eliot
 --
-    <i><id1>S’io credesse che mia risposta fosse
-    A persona che mai tornasse al mondo,
-    Questa fiamma staria senza piu scosse.
-    Ma percioche giammai di questo fondo
-    Non torno vivo alcun, s’i’odo il vero,
-    Senza tema d’infamia ti rispondo.</id1></i>
+    <i><id2>S’io credesse che mia risposta fosse</id2>
+    <id2>A persona che mai tornasse al mondo,</id2>
+    <id2>Questa fiamma staria senza piu scosse.</id2>
+    <id2>Ma percioche giammai di questo fondo</id2>
+    <id2>Non torno vivo alcun, s’i’odo il vero,</id2>
+    <id2>Senza tema d’infamia ti rispondo.</id2></i>
 
 Let us go then, you and I,
 When the evening is spread out against the sky
@@ -18,7 +18,7 @@ Of restless nights in one-night cheap hotels
 And sawdust restaurants with oyster-shells:
 Streets that follow like a tedious argument
 Of insidious intent
-To lead you to an overwhelming question ...
+To lead you to an overwhelming question...
 
 Oh, do not ask, “What is it?”
 Let us go and make our visit.
@@ -77,7 +77,7 @@ And when I am formulated, sprawling on a pin,
 When I am pinned and wriggling on the wall,
 Then how should I begin
 To spit out all the butt-ends of my days and ways?
-        <id2>And how should I presume?<id2>
+        <id2>And how should I presume?</id2>
 
 And I have known the arms already, known them all—
 Arms that are braceleted and white and bare
@@ -85,8 +85,8 @@ Arms that are braceleted and white and bare
 Is it perfume from a dress
 That makes me so digress?
 Arms that lie along a table, or wrap about a shawl.
-        <id2>And should I then presume?
-        And how should I begin?</id2>
+        <id2>And should I then presume?</id2>
+        <id2>And how should I begin?</id2>
 
 Shall I say, I have gone at dusk through narrow streets
 And watched the smoke that rises from the pipes
@@ -97,7 +97,7 @@ Scuttling across the floors of silent seas.
 
 And the afternoon, the evening, sleeps so peacefully!
 Smoothed by long fingers,
-Asleep ... tired ... or it malingers,
+Asleep... tired... or it malingers,
 Stretched on the floor, here beside you and me.
 Should I, after tea and cakes and ices,
 Have the strength to force the moment to its crisis?
@@ -118,8 +118,8 @@ To roll it towards some overwhelming question,
 To say: “I am Lazarus, come from the dead,
 Come back to tell you all, I shall tell you all”—
 If one, settling a pillow by her head
-        <id2>Should say: “That is not what I meant at all;
-        That is not it, at all.”</id2>
+        <id2>Should say: “That is not what I meant at all;</id2>
+        <id2>That is not it, at all.”</id2>
 
 And would it have been worth it, after all,
 Would it have been worth while,
@@ -131,8 +131,8 @@ But as if a magic lantern threw the nerves in patterns on a screen:
 Would it have been worth while
 If one, settling a pillow or throwing off a shawl,
 And turning toward the window, should say:
-        <id2>“That is not it at all,
-        That is not what I meant, at all.”</id2>
+        <id2>“That is not it at all,</id2>
+        <id2>That is not what I meant, at all.”</id2>
 
 No! I am not Prince Hamlet, nor was meant to be;
 Am an attendant lord, one that will do
@@ -144,7 +144,7 @@ Full of high sentence, but a bit obtuse;
 At times, indeed, almost ridiculous—
 Almost, at times, the Fool.
 
-I grow old ... I grow old ...
+I grow old... I grow old...
 I shall wear the bottoms of my trousers rolled.
 
 Shall I part my hair behind?   Do I dare to eat a peach?
