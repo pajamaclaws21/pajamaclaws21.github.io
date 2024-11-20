@@ -10,11 +10,11 @@
 			links = links.filter((element) => (element.className != "back"));
 			links.forEach((element) => {
 				element.addEventListener("click", function () {
-					window.location = `${window.location}poem.html?poem=${this.id}`;
+					window.location = `${window.location}/poem.html?poem=${this.id}`;
 				});
 			});
 		}
-		
+
 		window.onload = initLinks;
 	</script>
 </head>
