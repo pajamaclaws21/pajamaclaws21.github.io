@@ -6,15 +6,15 @@
 	<link rel="manifest" href="https://pajamaclaws21.github.io/manifest.json">
 	<script>
 		function initLinks(){
-		let links = [].slice.call(document.getElementsByTagName("a"));
-		links = links.filter((element) => (element.className != "back"));
-		links.forEach((element) => {
-			element.addEventListener("click", function () {
-				window.location = `${window.location}poem.html?poem=${this.id}`;
+			let links = [].slice.call(document.getElementsByTagName("a"));
+			links = links.filter((element) => (element.className != "back"));
+			links.forEach((element) => {
+				element.addEventListener("click", function () {
+					window.location = `${window.location}poem.html?poem=${this.id}`;
+				});
 			});
-		});
 		}
-
+		
 		window.onload = initLinks;
 	</script>
 </head>
