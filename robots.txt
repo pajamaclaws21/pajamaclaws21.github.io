@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Allow: /blog
+Allow: /poetry/
+Allow: /experiments/
+Disallow: /blog/
+Disallow: /css/
+Disallow: /images/
+Disallow: /src/
+Disallow: /templates/
+Disallow: /manifest.json
+Disallow: /offline.html
+Disallow: /README.md
+Disallow: /robots.txt
+Disallow: /sitemap.xml
+Disallow: /sw.js
+
+Sitemap: https://pajamaclaws21.github.io/sitemap.xml
