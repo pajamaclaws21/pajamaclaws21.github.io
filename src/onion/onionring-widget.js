@@ -8,6 +8,12 @@
 var tag = document.getElementById(ringID); //find the widget on the page
 
 thisSite = window.location.href; //get the url of the site we're currently on
+
+// Redirecting pj21 netlify & render to be indexed as github
+if (thisSite.includes("pajamaclaws21.netlify.app") || thisSite.includes("pajamaclaws21.onrender.com")){
+  thisSite = "https://pajamaclaws21.github.io";
+}
+
 thisIndex = null;
 
 // go through the site list to see if this site is on it and find its position
