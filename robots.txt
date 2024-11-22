@@ -3,6 +3,7 @@ Allow: /
 Allow: /blog
 Allow: /poetry/
 Allow: /experiments/
+Allow: /webring.html
 Disallow: /blog/
 Disallow: /css/
 Disallow: /images/
