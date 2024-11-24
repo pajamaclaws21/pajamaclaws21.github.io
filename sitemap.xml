@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>https://pajamaclaws21.github.io</loc></url>
-    <url><loc>https://pajamaclaws21.github.io/webring.html</loc></url>
-    <url><loc>https://pajamaclaws21.github.io/blog</loc></url>
-    <url><loc>https://pajamaclaws21.github.io/expirements/ilga</loc></url>
-    <url><loc>https://pajamaclaws21.github.io/expirements/eoo.html</loc></url>
-    <url><loc>https://pajamaclaws21.github.io/expirements/wbib2.html</loc></url>
-    <url><loc>https://pajamaclaws21.github.io/poetry</loc></url>
-    <url><loc>https://pajamaclaws21.github.io/poetry/raw/arrabal</loc></url>
-    <url><loc>https://pajamaclaws21.github.io/poetry/raw/lluvia</loc></url>
-    <url><loc>https://pajamaclaws21.github.io/poetry/raw/lluvia-tr</loc></url>
-    <url><loc>https://pajamaclaws21.github.io/poetry/raw/versos</loc></url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://pajamaclaws21.github.io/</loc>
+  <lastmod>2024-11-24T17:26:18+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://pajamaclaws21.github.io/blog</loc>
+  <lastmod>2024-11-24T17:26:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pajamaclaws21.github.io/poetry/</loc>
+  <lastmod>2024-11-24T17:26:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pajamaclaws21.github.io/webring.html</loc>
+  <lastmod>2024-11-24T17:26:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pajamaclaws21.github.io/experiments/eoo.html</loc>
+  <lastmod>2024-11-24T17:26:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pajamaclaws21.github.io/experiments/ilga/</loc>
+  <lastmod>2024-11-24T17:26:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pajamaclaws21.github.io/experiments/appview.html</loc>
+  <lastmod>2024-11-24T17:26:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pajamaclaws21.github.io/experiments/wbib2.html</loc>
+  <lastmod>2024-11-24T17:26:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pajamaclaws21.github.io/Saving-Notebook/</loc>
+  <lastmod>2022-03-14T17:51:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pajamaclaws21.github.io/blog.html</loc>
+  <lastmod>2024-11-24T17:26:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
