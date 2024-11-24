@@ -5,6 +5,7 @@ Allow: /poetry/
 Allow: /experiments/
 Allow: /webring.html
 Allow: /sitemap.xml
+Allow: /robots.txt
 Disallow: /blog/
 Disallow: /css/
 Disallow: /images/
@@ -13,7 +14,6 @@ Disallow: /templates/
 Disallow: /manifest.json
 Disallow: /offline.html
 Disallow: /README.md
-Disallow: /robots.txt
 Disallow: /sw.js
 
 Sitemap: https://pajamaclaws21.github.io/sitemap.xml
