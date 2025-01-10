@@ -8,16 +8,16 @@
     * {
       font-family: "Inter", serif;
     }
-    p {
+    p.info {
       font-size: 12px;
     }
-		input.site {
-			border: 1px solid DarkGrey;
-			position: relative;
-			z-index: 999;
-			width: 300px;
-      overflow: hidden;
-		}
+	input.site {
+		border: 1px solid DarkGrey;
+		position: relative;
+		z-index: 999;
+		width: 300px;
+      	overflow: hidden;
+	}
 	</style>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
@@ -25,7 +25,7 @@
 <body>
 	<input class="site" type="text" id="siteinput" name="siteinput" placeholder="https://example.com">
 	<div id="page">
-    <p>WBIB v3. Specifically built for Wikipedia.</p>
+    <p class="info">WBIB v3. Specifically built for Wikipedia.</p>
   </div>
   <script>
 	function accessor(url) {
