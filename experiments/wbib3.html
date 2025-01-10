@@ -86,7 +86,7 @@
             let ending = url.split("."); // get file ending of url
             ending = ending[ending.length - 1];
           
-            if (ending == "jpg" || ending == "jpeg" || ending == "svg" || ending == "gif") {
+            if (ending == "png" || ending == "ico" || ending == "jpg" || ending == "jpeg" || ending == "svg" || ending == "gif" || ending == "webp") {
               
               if (url.split("api.allorigins.win").length > 1) {
       	      document.getElementById("imageDisplay").src = url; // don't have to re-AllOrigins-ify an already done link
