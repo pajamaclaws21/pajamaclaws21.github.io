@@ -9,9 +9,6 @@
       }
       p.info {
       font-size: 12px;
-      position: relative;
-      padding: 5px;
-      padding-top: 10vh;
       }
       input.site {
       border: 1px solid DarkGrey;
@@ -58,8 +55,10 @@
       <input class="site" type="text" id="siteinput" name="siteinput" placeholder="https://example.com">
     </div>
     <div id="page">
+      <br><br><br>
       <p class="info">WBIB v3. Specifically built for Wikipedia.</p>
     </div>
+    <br><br><br>
     <img id="imageDisplay">
     <script>
       function accessor(url) {
@@ -87,7 +86,12 @@
             ending = ending[ending.length - 1];
           
             if (ending == "jpg" || ending == "jpeg" || ending == "svg" || ending == "gif") {
-              document.getElementById("imageDisplay").src = accessor(url); // display image type
+              
+              if (url.split("api.allorigins.win").length > 1) {
+      	      document.getElementById("imageDisplay").src = url; // don't have to re-AllOrigins-ify an already done link
+              } else {
+              document.getElementById("imageDisplay").src = accessor(url); // display an un-AllOrigins-ified image
+              }
             }
              else {
               $.get(accessor(url), function (data) {
