@@ -4,56 +4,68 @@
     <title>WBIB v3</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+	  
       * {
-      font-family: "Inter", serif;
+      	font-family: "Inter", serif;
       }
+
       p.info {
-      font-size: 12px;
+      	font-size: 12px;
       }
+
       input.site {
-      border: 1px solid DarkGrey;
-      z-index: 9999;
-      width: 300px;
-      overflow: hidden;
+      	border: 1px solid DarkGrey;
+      	z-index: 9999;
+      	width: 270px;
+      	height: 18px;
+      	overflow: hidden;
+      	margin-top: 2px;
       }
+
       a.back {
-      font-size: 10px;
+      	font-size: 10px;
       }
+
       @keyframes fadein {
-      0% {opacity: 0.3;}
-      25% {opacity: 0.5;}
-      50% {opacity: 0.7;}
-      100% {opacity: 1;}
+		0% { opacity: 0.3; }
+		25% { opacity: 0.5; }
+		50% { opacity: 0.7; }
+		100% { opacity: 1; }
       }
+
       @keyframes fadeout {
-      0% {opacity: 1;}
-      25% {opacity: 0.7;}
-      50% {opacity: 0.5;}
-      100% {opacity: 0.3;}
+		0% { opacity: 1; }
+		25% { opacity: 0.7; }
+		50% { opacity: 0.5; }
+		100% { opacity: 0.3; }
       }
+
       div.top {
-      border: 1px solid black;
-      background-color: white;
-      padding: 5px;
-      position: absolute;
-      z-index: 999;
-      opacity: 0.3;
-      animation: fadeout;
-      animation-duration: 0.15s;
+		border: 1px solid black;
+		background-color: white;
+		padding: 5px;
+		position: absolute;
+		z-index: 999;
+		opacity: 0.3;
+		animation: fadeout;
+		animation-duration: 0.15s;
       }
+
       div.top:hover {
-      opacity: 1;
-      animation: fadein;
-      animation-duration: 0.15s;
+		opacity: 1;
+		animation: fadein;
+		animation-duration: 0.15s;
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<link rel="icon" type="image/jpg" href="https://pajamaclaws21.github.io/WBIB/favicon.ico">
+    <link rel="icon" type="image/jpg" href="https://pajamaclaws21.github.io/WBIB/favicon.ico">
   </head>
   <body>
     <div class="top">
-      <a href="/" id="back" class="back" style="color: blue;"><- home</a> <br>
+      <a href="/" id="back" class="back" style="color: blue;">
+      <- home</a> <br>
       <input class="site" type="text" id="siteinput" name="siteinput" placeholder="https://example.com">
+      <button onclick="loadPage(document.getElementById('siteinput').value);">Go!</button>
     </div>
     <div id="page">
       <br><br><br>
@@ -63,70 +75,70 @@
     <img id="imageDisplay">
     <script>
       function accessor(url) {
-            // Creates an AllOrigins URL to the desired resource.
-            return `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
-          }
-          
-          function replace(string, stringToReplace, thingReplacing) {
-            // replaces stringToReplace with thingReplacing in the string.
-            let splitData = string.split(stringToReplace)
-            splitData.forEach((item, index, array) => {
-              if (index != (array.length - 1)) {
-                array[index] = item + thingReplacing;
-              }
-            });
-            return splitData
-          }
-          
-          function loadPage(url) {
-            // Loads the desired resource.
-            document.getElementById("page").innerHTML = ""; // reset display div
-            document.getElementById("imageDisplay").src = ""; // reset display img
-      
-            let ending = url.split("."); // get file ending of url
-            ending = ending[ending.length - 1];
-          
-            if (ending == "png" || ending == "ico" || ending == "jpg" || ending == "jpeg" || ending == "svg" || ending == "gif" || ending == "webp") {
-              
-              if (url.split("api.allorigins.win").length > 1) {
-      	      document.getElementById("imageDisplay").src = url; // don't have to re-AllOrigins-ify an already done link
-              } else {
-              document.getElementById("imageDisplay").src = accessor(url); // display an un-AllOrigins-ified image
-              }
-            }
-             else {
-              $.get(accessor(url), function (data) {
-                let page = "https://" + url.split("//")[1].split("/")[0];
-          
-                // Change relative links to absolute links
-                data = replace(data, '"//', '"https://').join(""); // This is used to load W***media images
-                data = replace(data, '"/', '"' + page + "/").join("");
-                document.getElementById("page").innerHTML = data;
-          
-                // Make it so every link that's clicked loads that page in WBIB
-                let anchors = [].slice.call(document.getElementsByTagName("a"));
-                anchors.forEach((element) => {
-                  element.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    loadPage(this.href);
-                  })
-                });
-          
-                // Make it so every image on the page loads. Used to load W***media images
-                let images = [].slice.call(document.getElementsByTagName("img"));
-                images.forEach((element) => {
-                  element.src = accessor(element.src);
-                });
-              });
-            }
-          }
-          
-          var siteinput = document.getElementById("siteinput");
-          siteinput.addEventListener("keydown", function (e) {
-            if (e.code === "Enter") {
-              loadPage(document.getElementById("siteinput").value);
-            }
-          });
+             // Creates an AllOrigins URL to the desired resource.
+             return `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+           }
+           
+           function replace(string, stringToReplace, thingReplacing) {
+             // replaces stringToReplace with thingReplacing in the string.
+             let splitData = string.split(stringToReplace)
+             splitData.forEach((item, index, array) => {
+               if (index != (array.length - 1)) {
+                 array[index] = item + thingReplacing;
+               }
+             });
+             return splitData
+           }
+           
+           function loadPage(url) {
+             // Loads the desired resource.
+             document.getElementById("page").innerHTML = ""; // reset display div
+             document.getElementById("imageDisplay").src = ""; // reset display img
+       
+             let ending = url.split("."); // get file ending of url
+             ending = ending[ending.length - 1];
+           
+             if (ending == "png" || ending == "ico" || ending == "jpg" || ending == "jpeg" || ending == "svg" || ending == "gif" || ending == "webp") {
+               
+               if (url.split("api.allorigins.win").length > 1) {
+       	      document.getElementById("imageDisplay").src = url; // don't have to re-AllOrigins-ify an already done link
+               } else {
+               document.getElementById("imageDisplay").src = accessor(url); // display an un-AllOrigins-ified image
+               }
+             }
+              else {
+               $.get(accessor(url), function (data) {
+                 let page = "https://" + url.split("//")[1].split("/")[0];
+           
+                 // Change relative links to absolute links
+                 data = replace(data, '"//', '"https://').join(""); // This is used to load W***media images
+                 data = replace(data, '"/', '"' + page + "/").join("");
+                 document.getElementById("page").innerHTML = data;
+           
+                 // Make it so every link that's clicked loads that page in WBIB
+                 let anchors = [].slice.call(document.getElementsByTagName("a"));
+                 anchors.forEach((element) => {
+                   element.addEventListener("click", function (event) {
+                     event.preventDefault();
+                     loadPage(this.href);
+                   })
+                 });
+           
+                 // Make it so every image on the page loads. Used to load W***media images
+                 let images = [].slice.call(document.getElementsByTagName("img"));
+                 images.forEach((element) => {
+                   element.src = accessor(element.src);
+                 });
+               });
+             }
+           }
+           
+           var siteinput = document.getElementById("siteinput");
+           siteinput.addEventListener("keydown", function (e) {
+             if (e.code === "Enter") {
+               loadPage(document.getElementById("siteinput").value);
+             }
+           });
     </script>
   </body>
 </html>
