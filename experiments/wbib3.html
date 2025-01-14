@@ -94,6 +94,7 @@
              // Loads the desired resource.
              document.getElementById("page").innerHTML = ""; // reset display div
              document.getElementById("imageDisplay").src = ""; // reset display img
+             document.getElementById("siteinput").value = url; // update siteinput value if diff
        
              let ending = url.split("."); // get file ending of url
              ending = ending[ending.length - 1];
