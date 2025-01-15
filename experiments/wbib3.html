@@ -22,9 +22,12 @@
       	margin-top: 2px;
       }
 
-      a.back {
-      	font-size: 10px;
-      }
+      a.navigation {
+        font-size: 10px;
+        color: blue;
+        float: left;
+        padding-top: 5px;
+		  }
 
       @keyframes fadein {
         0% { opacity: 0.3; }
@@ -62,8 +65,8 @@
   </head>
   <body>
     <div class="top" id="panel">
-      <a href="/" id="back" class="back" style="color: blue;">
-      <- home</a> <br>
+      <a href="javascript:void(0)" id="back" class="navigation"><- back</a> 
+      <a href="javascript:void(0)" id="back" class="navigation" style="padding-left: 20px;">forward -></a>  
       <input class="site" type="text" id="siteinput" name="siteinput" placeholder="https://example.com">
       <button onclick="loadPage(document.getElementById('siteinput').value);">Go!</button>
     </div>
@@ -74,72 +77,76 @@
     <br><br><br>
     <img id="imageDisplay">
     <script>
+      const history = [];
+
       function accessor(url) {
-             // Creates an AllOrigins URL to the desired resource.
-             return `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
-           }
-           
-           function replace(string, stringToReplace, thingReplacing) {
-             // replaces stringToReplace with thingReplacing in the string.
-             let splitData = string.split(stringToReplace)
-             splitData.forEach((item, index, array) => {
-               if (index != (array.length - 1)) {
-                 array[index] = item + thingReplacing;
-               }
-             });
-             return splitData
-           }
-           
-           function loadPage(url) {
-             // Loads the desired resource.
-             document.getElementById("page").innerHTML = ""; // reset display div
-             document.getElementById("imageDisplay").src = ""; // reset display img
-             document.getElementById("siteinput").value = url; // update siteinput value if diff
-       
-             let ending = url.split("."); // get file ending of url
-             ending = ending[ending.length - 1];
-           
-             if (ending == "png" || ending == "ico" || ending == "jpg" || ending == "jpeg" || ending == "svg" || ending == "gif" || ending == "webp") {
-               
-               if (url.split("api.allorigins.win").length > 1) {
-       	      document.getElementById("imageDisplay").src = url; // don't have to re-AllOrigins-ify an already done link
-               } else {
-               document.getElementById("imageDisplay").src = accessor(url); // display an un-AllOrigins-ified image
-               }
-             }
-              else {
-               $.get(accessor(url), function (data) {
-                 let page = "https://" + url.split("//")[1].split("/")[0];
-           
-                 // Change relative links to absolute links
-                 data = replace(data, '"//', '"https://').join(""); // This is used to load W***media images
-                 data = replace(data, '"/', '"' + page + "/").join("");
-                 document.getElementById("page").innerHTML = data;
-           
-                 // Make it so every link that's clicked loads that page in WBIB
-                 let anchors = [].slice.call(document.getElementsByTagName("a"));
-                 anchors.forEach((element) => {
-                   element.addEventListener("click", function (event) {
-                     event.preventDefault();
-                     loadPage(this.href);
-                   })
-                 });
-           
-                 // Make it so every image on the page loads. Used to load W***media images
-                 let images = [].slice.call(document.getElementsByTagName("img"));
-                 images.forEach((element) => {
-                   element.src = accessor(element.src);
-                 });
-               });
-             }
-           }
-           
-           var siteinput = document.getElementById("siteinput");
-           siteinput.addEventListener("keydown", function (e) {
-             if (e.code === "Enter") {
-               loadPage(document.getElementById("siteinput").value);
-             }
-           });
+        // Creates an AllOrigins URL to the desired resource.
+        return `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+      }
+
+      function replace(string, stringToReplace, thingReplacing) {
+        // replaces stringToReplace with thingReplacing in the string.
+        let splitData = string.split(stringToReplace)
+        splitData.forEach((item, index, array) => {
+          if (index != (array.length - 1)) {
+            array[index] = item + thingReplacing;
+          }
+        });
+        return splitData
+      }
+      
+      function loadPage(url) {
+        history[history.length] = url;
+
+        // Loads the desired resource.
+        document.getElementById("page").innerHTML = ""; // reset display div
+        document.getElementById("imageDisplay").src = ""; // reset display img
+        document.getElementById("siteinput").value = url; // update siteinput value if diff
+
+        let ending = url.split("."); // get file ending of url
+        ending = ending[ending.length - 1];
+      
+        if (ending == "png" || ending == "ico" || ending == "jpg" || ending == "jpeg" || ending == "svg" || ending == "gif" || ending == "webp") {
+          
+          if (url.split("api.allorigins.win").length > 1) {
+        document.getElementById("imageDisplay").src = url; // don't have to re-AllOrigins-ify an already done link
+          } else {
+          document.getElementById("imageDisplay").src = accessor(url); // display an un-AllOrigins-ified image
+          }
+        }
+        else {
+          $.get(accessor(url), function (data) {
+            let page = "https://" + url.split("//")[1].split("/")[0];
+      
+            // Change relative links to absolute links
+            data = replace(data, '"//', '"https://').join(""); // This is used to load W***media images
+            data = replace(data, '"/', '"' + page + "/").join("");
+            document.getElementById("page").innerHTML = data;
+      
+            // Make it so every link that's clicked loads that page in WBIB
+            let anchors = [].slice.call(document.getElementsByTagName("a"));
+            anchors.forEach((element) => {
+              element.addEventListener("click", function (event) {
+                event.preventDefault();
+                loadPage(this.href);
+              })
+            });
+      
+            // Make it so every image on the page loads. Used to load W***media images
+            let images = [].slice.call(document.getElementsByTagName("img"));
+            images.forEach((element) => {
+              element.src = accessor(element.src);
+            });
+          });
+        }
+      }
+      
+      var siteinput = document.getElementById("siteinput");
+      siteinput.addEventListener("keydown", function (e) {
+        if (e.code === "Enter") {
+          loadPage(document.getElementById("siteinput").value);
+        }
+      });
     </script>
     <!--<script>
       // Draggable DIV script from W3Schools
