@@ -65,8 +65,8 @@
   </head>
   <body>
     <div class="top" id="panel">
-      <a href="javascript:void(0)" id="back" class="navigation"><- back</a> 
-      <a href="javascript:void(0)" id="back" class="navigation" style="padding-left: 20px;">forward -></a>  
+      <a href="javascript:void(0)" onclick="let page = history[history.lastIndexOf(document.getElementById('siteinput').value) - 1]; loadPage(page); document.getElementById('siteinput').value = page; history.pop();" id="back" class="navigation"><- back</a> 
+      <a href="javascript:void(0)" onclick="let page = history[history.lastIndexOf(document.getElementById('siteinput').value) + 1]; loadPage(page); document.getElementById('siteinput').value = page; history.pop();" id="back" class="navigation" style="padding-left: 20px;">forward -></a>  
       <input class="site" type="text" id="siteinput" name="siteinput" placeholder="https://example.com">
       <button onclick="loadPage(document.getElementById('siteinput').value);">Go!</button>
     </div>
@@ -96,7 +96,7 @@
       }
       
       function loadPage(url) {
-        history[history.length] = url;
+        history[history.length] = url; // enables navigation thru history
 
         // Loads the desired resource.
         document.getElementById("page").innerHTML = ""; // reset display div
@@ -128,7 +128,9 @@
             anchors.forEach((element) => {
               element.addEventListener("click", function (event) {
                 event.preventDefault();
-                loadPage(this.href);
+                if (this.href != "javascript:void(0)") { // makes it so clicking navigation links doesn't load an empty page
+                  loadPage(this.href);
+                }
               })
             });
       
