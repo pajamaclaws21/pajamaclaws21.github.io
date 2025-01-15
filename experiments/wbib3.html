@@ -66,7 +66,7 @@
   <body>
     <div class="top" id="panel">
       <a href="javascript:void(0)" onclick="var page = history[history.lastIndexOf(document.getElementById('siteinput').value) - 1]; loadPage(page); document.getElementById('siteinput').value = page; history.pop();" id="back" class="navigation"><- back</a> 
-      <a href="javascript:void(0)" onclick="var page = history[history.lastIndexOf(document.getElementById('siteinput').value) + 1]; loadPage(page); document.getElementById('siteinput').value = page; history.pop();" id="back" class="navigation" style="padding-left: 20px;">forward -></a>  
+      <a href="javascript:void(0)" onclick="var page = history[history.lastIndexOf(document.getElementById('siteinput').value) + 1]; loadPage(page); document.getElementById('siteinput').value = page; history.pop();" id="back" class="navigation" style="padding-left: 20px;">forward -></a>  <br>
       <input class="site" type="text" id="siteinput" name="siteinput" placeholder="https://example.com">
       <button onclick="loadPage(document.getElementById('siteinput').value);">Go!</button>
     </div>
