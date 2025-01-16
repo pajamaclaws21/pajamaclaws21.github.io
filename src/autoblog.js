@@ -3,7 +3,7 @@ var posts = [];
 
 function localizePosts() {
     for (let i = postCount; i > 0; i--) {
-        posts[i + 1] = `https://pajamaclaws21.github.io/blog/entry${i}`;
+        posts[i + 1] = `https://pajamaclaws21.onrender.com/blog/entry${i}`;
     };
 
     posts = posts.reverse();

@@ -3,12 +3,12 @@
 
 <head>
 	<title>Poem</title>
-  <link rel="stylesheet" href="https://pajamaclaws21.github.io/css/poetry.css">
-	<link rel="manifest" href="https://pajamaclaws21.github.io/manifest.json">
+  <link rel="stylesheet" href="https://pajamaclaws21.onrender.com/css/poetry.css">
+	<link rel="manifest" href="https://pajamaclaws21.onrender.com/manifest.json">
 	<script>
 		  // Get the poem URL parameter & make the url
       let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
-      let url = `https://pajamaclaws21.github.io/poetry/raw/${poem}`;
+      let url = `https://pajamaclaws21.onrender.com/poetry/raw/${poem}`;
 
       // Get the poem's content & display it
       fetch(url).then(response => response.text())
