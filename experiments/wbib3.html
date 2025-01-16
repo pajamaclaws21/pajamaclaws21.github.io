@@ -59,6 +59,12 @@
         animation: fadein;
         animation-duration: 0.15s;
       }
+      
+      p.tooltip {
+        margin: 0;
+        float: right;
+        font-size: 10px;
+      }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://pajamaclaws21.github.io/css/useful.css">
@@ -66,8 +72,10 @@
   </head>
   <body>
     <div class="top" id="panel">
-      <a href="javascript:void(0)" onclick="var page = history[history.lastIndexOf(document.getElementById('siteinput').value) - 1]; loadPage(page); document.getElementById('siteinput').value = page; history.pop();" id="back" class="navigation"><- back</a> 
-      <a href="javascript:void(0)" onclick="var page = history[history.lastIndexOf(document.getElementById('siteinput').value) + 1]; loadPage(page); document.getElementById('siteinput').value = page; history.pop();" id="back" class="navigation" style="padding-left: 20px;">forward -></a>  <br>
+      <a href="javascript:void(0)" onclick="var page = history[history.lastIndexOf(document.getElementById('siteinput').value) - 1]; if (page != undefined) {loadPage(page); document.getElementById('siteinput').value = page; history.pop();};" id="back" class="navigation"><- back</a> 
+      <a href="javascript:void(0)" onclick="var page = history[history.lastIndexOf(document.getElementById('siteinput').value) + 1]; if (page != undefined) {loadPage(page); document.getElementById('siteinput').value = page; history.pop();};" id="back" class="navigation" style="padding-left: 20px;">forward -></a>
+      <p class="tooltip" title="WBIB v3 🚸">?</p>
+      <br>
       <input class="site" type="text" id="siteinput" name="siteinput" placeholder="https://example.com">
       <button onclick="loadPage(document.getElementById('siteinput').value);">Go!</button>
     </div>
