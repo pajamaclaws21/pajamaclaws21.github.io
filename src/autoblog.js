@@ -1,4 +1,4 @@
-var postCount = 5;
+var postCount = 6;
 var posts = [];
 
 function localizePosts() {
