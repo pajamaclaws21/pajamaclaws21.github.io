@@ -130,6 +130,7 @@
             // Change relative links to absolute links
             data = replace(data, '"//', '"https://').join(""); // This is used to load W***media images
             data = replace(data, '"/', '"' + page + "/").join("");
+            data = replace(data, '"#', '"' + page + "/").join(""); // Wikipedia often has links that link to headings without having an absolute link!! Fixes that
             document.getElementById("page").innerHTML = data;
       
             // Make it so every link that's clicked loads that page in WBIB
