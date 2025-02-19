@@ -5,7 +5,6 @@
 }
 
 body {
-  /* https://background-tiles.com/overview/orange/patterns/large/1019.png */
   background-image: url('https://pajamaclaws21.onrender.com/images/poem-background.png');
 }
 
@@ -43,12 +42,18 @@ p.small {
   margin: 1%;
 }
 
+ul.small-poems > li {
+  font-weight: 300;
+  font-size: 12px;
+  margin-top: 0;
+}
+
 ul {
   margin-top: 0;
   list-style: '-> ';
 }
 
-li {
+ul.main-poems > li {
   margin-top: 0;
   font-weight: 200;
   font-size: 16px;

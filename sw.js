@@ -1,4 +1,4 @@
-var pages = ["/", "/blog", "/poetry/", "/expirements/", "/templates/", "/babytools", "/webring.html", "/offline.html"];
+var pages = ["/", "/blog", "/poetry/", "/poetry/raw/", "/expirements/", "/templates/", "/babytools", "/webring.html", "/offline.html"];
 
 // Service worker code from https://blog.heroku.com/how-to-make-progressive-web-app
 
