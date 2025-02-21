@@ -6,19 +6,19 @@
     "display": "fullscreen",
     "orientation": "portrait",
     "scope": "/",
-    "start_url": "https://pajamaclaws21.github.io",
+    "start_url": "https://pajamaclaws21.onrender.com",
     "description": "the pj21 site with all my stuff",
     "icons": [
         {
-            "src": "https://pajamaclaws21.github.io/images/pj.ico",
+            "src": "https://pajamaclaws21.onrender.com/images/pj.ico",
             "sizes": "16x16"
         },
         {
-            "src": "https://pajamaclaws21.github.io/images/pajamaclaws21.png",
+            "src": "https://pajamaclaws21.onrender.com/images/pajamaclaws21.png",
             "sizes": "512x512"
         },
         {
-            "src": "https://pajamaclaws21.github.io/images/ios-icon.png",
+            "src": "https://pajamaclaws21.onrender.com/images/ios-icon.png",
             "sizes": "180x180"
         }
     ]
