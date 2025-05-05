@@ -4,6 +4,12 @@
 <title>Page Title</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <style>
+body {
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+
 .unselectable {
 -webkit-user-select: none;       
 -moz-user-select: none;
@@ -20,7 +26,9 @@ font-size: 18px;
 }
 
 div {
-width: 100%
+margin: 5px;
+padding: 5px;
+width: 95%;
 }
 
 kbd {
@@ -71,10 +79,30 @@ span.underline {
 text-decoration: underline;
 text-decoration-style: dotted;
 }
+
+header {
+background-color: #F5F5F5;
+border: 1px solid #DDDDDD;
+height: 25px;
+width: 100%;
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+padding: 5px
+}
+
+header a {
+color: blue;
+text-decoration: none;
+}
+
 </style>
 </head>
 <body>
 
+<header>
+<a href="">home</a> > <a href="">poetry</a> > <a href="">grey</a>
+</header>
+<br>
 <div>
 <button class="unselectable">reply</button>
 <p class="posted unselectable">Posted by <span class="underline">author</span></p>
