@@ -3,6 +3,22 @@
 <head>
 <title>Page Title</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<script>
+    // Get the poem URL parameter & make the url
+let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
+let url = `https://pajamaclaws21.onrender.com/poetry/raw/grey/${poem}`;
+
+// Get the poem's content & display it
+fetch(url).then(response => response.text())
+  .then(response => {
+      response = response.split("\n--\n");
+      document.getElementById("title").innerText = response[0];
+      document.getElementById("author").innerText = response[1];
+      document.getElementById("body").innerHTML = response[2].replaceAll("\n", "<br>");
+  });
+</script>
+
 <style>
 body {
 margin: 0;
@@ -100,19 +116,15 @@ text-decoration: none;
 <body>
 
 <header>
-<a href="">home</a> > <a href="">poetry</a> > <a href="">grey</a>
+<a href="https://pajamaclaws21.github.io/">home</a> > <a href="https://pajamaclaws21.github.io/poetry.html">poetry</a> > <a href="https://pajamaclaws21.github.io/poetry/grey.html">grey</a>
 </header>
-<br>
+
 <div>
 <button class="unselectable">reply</button>
-<p class="posted unselectable">Posted by <span class="underline">author</span></p>
-<h1><span class="star unselectable">★</span> Girl that got hit by a car in front of Billy's last night - m4w</h1>
-<kbd class="unselectable">age: <b>27</b></kbd>
-<p>I was outside smoking. You were crossing the street and got hit by a car. You bounced off the hood and landed on your feet yelling something about being indestructible.
-<br><br>
-The other night I almost got trapped in a dumpster because I was going after a pizza that I thought I wanted to take home with me. I've also recently slept on my kitchen floor.
-<br><br>
-I think we'd be a good fit for each other. Move in with me? Let's get married?
+<p class="posted unselectable">Posted by <span class="underline" id="author">author</span></p>
+<h1><span class="star unselectable">★</span> <span id="title">title</span></h1>
+<kbd class="unselectable">age: <b>16</b></kbd>
+<p id="body">lines...</p>
 </div>
 
 </body>
