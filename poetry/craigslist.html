@@ -13,6 +13,7 @@ let url = `https://pajamaclaws21.onrender.com/poetry/raw/grey/${poem}`;
 fetch(url).then(response => response.text())
   .then(response => {
       response = response.split("\n--\n");
+      document.getElementById("poem").innerText = poem;
       document.getElementById("title").innerText = response[0];
       document.getElementById("author").innerText = response[1];
       document.getElementById("body").innerHTML = response[2].replaceAll("\n", "<br>");
