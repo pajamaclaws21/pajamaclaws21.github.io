@@ -50,8 +50,8 @@ img {
   position: relative;
 }
 
-/* touch screen */
-@media (any-pointer: coarse) {
+/* ios */
+@supports (-webkit-touch-callout: none) {
     p {
         margin-left: 10vw;
         margin-right: 10vw;
@@ -65,8 +65,8 @@ img {
       }
 }
 
-/* no touch screen */
-@media (any-pointer: fine) {
+/* not ios*/
+@supports not (-webkit-touch-callout: none) {
   p {
     margin-left: 40vw;
     margin-right: 40vw;
