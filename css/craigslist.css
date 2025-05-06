@@ -53,12 +53,17 @@ button:hover {
     background: linear-gradient(#DDDDDD, #F5F5F5);
 }
     
-span.star {
+label.star {
     font-size: 18px;
+    display: inline;
     color: #DDDDDD;
 }
     
-span.star:hover {
+label.star:hover {
+    color: #e7ed26;
+}
+
+#star-box:checked + label {
     color: #e7ed26;
 }
     
