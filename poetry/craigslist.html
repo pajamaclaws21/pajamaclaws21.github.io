@@ -8,6 +8,7 @@
     // Get the poem URL parameter & make the url
 let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
 let url = `https://pajamaclaws21.onrender.com/poetry/raw/grey/${poem}`;
+document.getElementById("poem").innerText = poem;
 
 // Get the poem's content & display it
 fetch(url).then(response => response.text())
@@ -117,6 +118,10 @@ color: blue;
 text-decoration: none;
 }
 
+span.poem {
+    color: blue;
+}
+
 /* Indent classes */
 id1 {
   margin-left: 5%;
@@ -135,7 +140,7 @@ id4 {
 <body>
 
 <header>
-<a href="/">home</a> > <a href="/poetry/index.html">poetry</a> > <a href="/poetry/grey.html">grey</a>
+<a href="/">home</a> > <a href="/poetry/index.html">poetry</a> > <a href="/poetry/grey.html">grey</a> > <span class="poem" id="poem">here</span>
 </header>
 
 <div>
