@@ -1,141 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Poetry for Grey</title>
-<link rel="manifest" href="https://pajamaclaws21.onrender.com/manifest.json">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
-<script>
-    // Get the poem URL parameter & make the url
-let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
-let url = `https://pajamaclaws21.onrender.com/poetry/raw/grey/${poem}`;
+    <title>Poetry for Grey</title>
+    <link rel="manifest" href="https://pajamaclaws21.onrender.com/manifest.json">
+    <link rel="stylesheet" href="https://pajamaclaws21.onrender.com/css/craigslist.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
 
-// Get the poem's content & display it
-fetch(url).then(response => response.text())
-  .then(response => {
-      response = response.split("\n--\n");
-      document.getElementById("poem").innerText = poem;
-      document.getElementById("title").innerText = response[0];
-      document.getElementById("author").innerText = response[1];
-      document.getElementById("body").innerHTML = response[2].replaceAll("\n", "<br>");
-    // Check if there's commentary attached to the poem
-    if (response[3]){
-        document.getElementById("tag").innerHTML = response[3];
-    }
-  });
-</script>
+    <script>
+        // Get the poem URL parameter & make the url
+        let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
+        let url = `https://pajamaclaws21.onrender.com/poetry/raw/grey/${poem}`;
 
-<style>
-body {
-margin: 0;
-padding: 0;
-overflow-x: hidden;
-overflow-y: hidden;
-}
-
-.unselectable {
--webkit-user-select: none;       
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
-}
-
-h1 {
-font-size: 30px;
-}
-
-p {
-font-size: 18px;
-white-space: preserve wrap;
-}
-
-div {
-margin: 5px;
-padding: 5px;
-width: 95%;
-}
-
-kbd {
-font-family: Arial, Helvetica, sans-serif;
-background-color: #F8F8F8;
-border: 1px solid #BBBBBB;
-border-radius: 5px;
-padding: 2.5px;
-margin-left: 5px
-}
-
-kbd:hover {
-background-color: #DDDDDD;
-color: #FFFFFF;
-}
-
-button {
-color: black;
-border: 1px solid #999999;
-background: linear-gradient(#F5F5F5, #DDDDDD);
-border-radius: 15px;
-padding: 4px 10px;
-}
-
-button:hover {
-background: linear-gradient(#DDDDDD, #F5F5F5);
-}
-
-span.star {
-font-size: 18px;
-color: #DDDDDD;
-}
-
-span.star:hover {
-color: #e7ed26;
-}
-
-p.posted {
-display: inline;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 14px;
-color: #222222;
-text-align: center;
-margin-left: 20px;
-}
-
-span.underline {
-text-decoration: underline;
-text-decoration-style: dotted;
-}
-
-header {
-background-color: #F5F5F5;
-border: 1px solid #DDDDDD;
-height: 25px;
-width: 100%;
-margin: 0;
-font-family: Arial, Helvetica, sans-serif;
-padding: 5px
-}
-
-header a {
-color: blue;
-text-decoration: none;
-}
-
-span.poem {
-    color: blue;
-}
-</style>
+        // Get the poem's content & display it
+        fetch(url).then(response => response.text())
+        .then(response => {
+            response = response.split("\n--\n");
+            document.getElementById("poem").innerText = poem;
+            document.getElementById("title").innerText = response[0];
+            document.getElementById("author").innerText = response[1];
+            document.getElementById("body").innerHTML = response[2].replaceAll("\n", "<br>");
+            // Check if there's commentary attached to the poem
+            if (response[3]){
+                document.getElementById("tag").innerHTML = response[3];
+            }
+        });
+    </script>
 </head>
 <body>
+    <header>
+    <a href="/">home</a> > <a href="/poetry/index.html">poetry</a> > <a href="/poetry/grey.html">grey</a> > <span class="poem" id="poem">here</span>
+    </header>
 
-<header>
-<a href="/">home</a> > <a href="/poetry/index.html">poetry</a> > <a href="/poetry/grey.html">grey</a> > <span class="poem" id="poem">here</span>
-</header>
-
-<div>
-<button class="unselectable">reply</button>
-<p class="posted unselectable">Posted by <span class="underline" id="author">author</span></p>
-<h1><span class="star unselectable">★</span> <span id="title">title</span></h1>
-<kbd class="unselectable" id="tag">age: <b>16</b></kbd>
-<p id="body">lines...</p>
-</div>
-
+    <div>
+    <button class="unselectable">reply</button>
+    <p class="posted unselectable">Posted by <span class="underline" id="author">author</span></p>
+    <h1><span class="star unselectable">★</span> <span id="title">title</span></h1>
+    <kbd class="unselectable" id="tag">age: <b>16</b></kbd>
+    <p id="body">lines...</p>
+    </div>
 </body>
 </html>
