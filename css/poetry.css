@@ -27,6 +27,7 @@ p.body {
   font-weight: 200;
   font-size: 18px;
   margin-left: 2.5%;
+  white-space: preserve wrap;
 }
 
 hr {
