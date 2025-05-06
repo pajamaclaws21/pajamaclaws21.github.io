@@ -17,6 +17,10 @@ fetch(url).then(response => response.text())
       document.getElementById("title").innerText = response[0];
       document.getElementById("author").innerText = response[1];
       document.getElementById("body").innerHTML = response[2].replaceAll("\n", "<br>");
+    // Check if there's commentary attached to the poem
+    if (response[3]){
+        document.getElementById("tag").innerHTML = response[3];
+    }
   });
 </script>
 
@@ -137,7 +141,7 @@ id4 {
 <button class="unselectable">reply</button>
 <p class="posted unselectable">Posted by <span class="underline" id="author">author</span></p>
 <h1><span class="star unselectable">★</span> <span id="title">title</span></h1>
-<kbd class="unselectable">age: <b>16</b></kbd>
+<kbd class="unselectable" id="tag">age: <b>16</b></kbd>
 <p id="body">lines...</p>
 </div>
 
