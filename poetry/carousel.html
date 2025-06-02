@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Carousel</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+* {
+  text-align: center;
+}
+
+div.container {
+  display: flex;
+  flex-direction: row;
+  height: 90%
+}
+
+button {
+  height: 0%;
+  background-color: #333333;
+  color: #555555;
+  font-size: 24px;
+  border: 0;
+}
+
+button:hover {
+  background-color: #444444;
+}
+
+.left {
+  margin: 10px 0px 10px 10px;
+}
+
+.right {
+  margin: 10px 10px 10px 0px;
+}
+
+img {
+  max-width: 75%;
+  height: auto;
+  display: none;
+  margin: 10px;
+}
+</style>
+</head>
+<body>
+
+<script>
+var current = 1;
+var numImages = 2;
+
+function advance(n){
+  document.getElementById(current).style.display = "none";
+  current += n;
+  if (current > numImages){
+    current = 1;
+  } else if (current < 1) {
+    current = numImages;
+  }
+  document.getElementById(current).style.display = "block";
+}
+
+</script>
+
+<div class="container">
+<button onclick="advance(1)" class="left">◀</button>
+<img id="1" src="https://i.pinimg.com/736x/a5/9e/8a/a59e8adff9f759e8f2b6a0142f080c26.jpg" style="display: table-cell">
+<img id="2" src="https://i.pinimg.com/736x/a3/ed/48/a3ed489bbd86396d479b1b89abc16ac6.jpg">
+<button onclick="advance(-1)" class="right">▶</button>
+</div>
+
+</body>
+</html>
