@@ -1,152 +1,212 @@
 [
     {
         "id": "airman",
-        "author": "An Irish Airman foresees his Death",
-        "title": "W.B. Yeats"
+        "title": "An Irish Airman foresees his Death",
+        "author": "W.B. Yeats",
+        "content": "/I know that I shall meet my fate/Somewhere among the clouds above;/Those that I fight I do not hate,/Those that I guard I do not love;/My country is Kiltartan Cross,/My countrymen Kiltartan’s poor,/No likely end could bring them loss/Or leave them happier than before./Nor law, nor duty bade me fight,/Nor public men, nor cheering crowds,/A lonely impulse of delight/Drove to this tumult in the clouds;/I balanced all, brought all to mind,/The years to come seemed waste of breath,/A waste of breath the years behind/In balance with this life, this death.",
+        "tags": "english"
     },
     {
         "id": "arrabal",
-        "author": "Del arrabal",
-        "title": "Alfonsina Storni"
+        "title": "Del arrabal",
+        "author": "Alfonsina Storni",
+        "content": "/Sofoca el calor; la pieza/Del conventillo malsano/Tiene entornada la puerta.../Ha pasada mediodía,/Es la siesta.//En el cuarto aquel mezquino/Donde todo es de miseria/Dice un poema la cuna/Que mueve al compás la abuela/El niño duerme tranquilo./Y las rizadas guedejas/Le forman una aureola/Tan bella o quizás más bella/Que la del niño Jesús/Que ampara la cabecera/De la cuna tan humilde/Que sabe decir poemas./Pasa un órgano en la calle,/Sus acordes tristes suenan/Mezclados con la algazara/De los chicos en la acera.//***//El niño sigue durmiendo;/Habla muy quedo la abuela/Y sus palabras son tristes/Porque son muchas sus penas:/\"¡Niño Jesús, tú que guardas/Del nene la cabecera,/No dejes que el nene sufra!\"//***//Sofoca el calor; la pieza/Del conventillo malsano/Tiene entornada la puerta.../",
+        "tags": "spanish"
     },
     {
         "id": "bridge",
-        "author": "Bridge Poem",
-        "title": "John Ashbery"
+        "title": "Bridge Poem",
+        "author": "John Ashbery",
+        "content": "/And now I cannot remember how I would/have had it. It is not a conduit (confluence?) but a place./The place, of movement and an order./The place of old order./But the tail end of the movement is new./Driving us to say what we are thinking./It is so much like a beach after all, where you stand/and think of going no further./And it is good when you get to no further./It is like a reason that picks you up and/places you where you always wanted to be./This far, it is fair to be crossing, to have crossed./Then there is no promise in the other./Here it is. Steel and air, a mottled presence,/small panacea/and lucky for us./And then it got very cool.",
+        "tags": "english"
     },
     {
         "id": "conditional",
-        "author": "The conditional",
-        "title": "ada limón"
+        "title": "The conditional",
+        "author": "ada limón",
+        "content": "/Say tomorrow doesn’t come./Say the moon becomes an icy pit./Say the sweet-gum tree is petrified./Say the sun’s a foul black tire fire./Say the owl’s eyes are pinpricks./Say the raccoon’s a hot tar stain./Say the shirt’s plastic ditch-litter./Say the kitchen’s a cow’s corpse./Say we never get to see it: bright/future, stuck like a bum star, never/coming close, never dazzling./Say we never meet her. Never him./Say we spend our last moments staring/at each other, hands knotted together,/clutching the dog, watching the sky burn./Say, It doesn’t matter. Say, That would be/enough. Say you’d still want this: us alive,/right here, feeling lucky.",
+        "tags": "english"
     },
     {
         "id": "craigslist",
-        "author": "Girl that got hit by a car in front of Billy's last night - m4w",
-        "title": "unknown"
+        "title": "Girl that got hit by a car in front of Billy's last night - m4w",
+        "author": "unknown",
+        "content": "/I was outside smoking. You were crossing the street and got hit by a car. You bounced off the hood and landed on your feet yelling something about being indestructible.//The other night I almost got trapped in a dumpster because I was going after a pizza that I thought I wanted to take home with me. I've also recently slept on my kitchen floor.//I think we'd be a good fit for each other. Move in with me? Let's get married?/",
+        "tags": "english"
     },
     {
         "id": "dirge",
-        "author": "Dirge Without Music",
-        "title": "Edna St. Vincent Millay"
+        "title": "Dirge Without Music",
+        "author": "Edna St. Vincent Millay",
+        "content": "/I am not resigned to the shutting away of loving hearts in the hard ground./So it is, and so it will be, for so it has been, time out of mind:/Into the darkness they go, the wise and the lovely.  Crowned/With lilies and with laurel they go; but I am not resigned.//Lovers and thinkers, into the earth with you./Be one with the dull, the indiscriminate dust./A fragment of what you felt, of what you knew,/A formula, a phrase remains,—but the best is lost.//The answers quick and keen, the honest look, the laughter, the love,—/They are gone.  They are gone to feed the roses.  Elegant and curled/Is the blossom.  Fragrant is the blossom.  I know.  But I do not approve./More precious was the light in your eyes than all the roses in the world.//Down, down, down into the darkness of the grave/Gently they go, the beautiful, the tender, the kind;/Quietly they go, the intelligent, the witty, the brave./I know.  But I do not approve.  And I am not resigned.",
+        "tags": "english"
     },
     {
         "id": "drink",
-        "author": "A Drinking Song",
-        "title": "W.B. Yeats"
+        "title": "A Drinking Song",
+        "author": "W.B. Yeats",
+        "content": "/Wine comes in at the mouth/And love comes in at the eye;/That’s all we shall know for truth/Before we grow old and die./I lift the glass to my mouth,/I look at you, and I sigh.",
+        "tags": "english"
     },
     {
         "id": "football",
-        "author": "Tackle Football",
-        "title": "Dave Chiasson"
+        "title": "Tackle Football",
+        "author": "Dave Chiasson",
+        "content": "/Snow up to our waists and coming down still./There was a field here once, when we began./We marked the end zones and set up the goals.//Now nobody can even move, much less tackle./I am Ganymede fleeing on a temple frieze./We stand around like lovesick Neanderthals.//We’re Pompeian before Pompeii was hot./We have the aspect of the classic dead/Or of stranded, shivering astronauts.//It was early in the era of the pause button:/We paused and paused the afternoons away/Indoors, blasting our ballistic erections//At the blurred bikinis of celebrities,/Then, splaying on the linoleum floor,/Awaited the apportioned pizza delivery.//Now, someone has paused us, or so it appears,/But they didn’t pause the snow, or the hour:/As the one gets higher, the other gets later.",
+        "tags": "english"
     },
     {
         "id": "furniture",
-        "author": "Pornography",
-        "title": "Richard Siken"
+        "title": "Pornography",
+        "author": "Richard Siken",
+        "content": "/They shot him by the side of the road. The sun was tangled in/his hair as he leaned against the car. He fingered his chest, just/over his heart, as if touching it directly. —<em>My car broke down./—You need oil and a belt. Take off your shirt.</em> You could consider/him compromised. There is no universe where he is not a/hitchhiker asking a rancher for help, where he is not plugged in/like a lamp. The doctor has to crack the ribs to get to the lungs./The plumber has to pull out the sink to get to the pipes in the/walls. The pornographer has to adjust the bodies to catch the/slant of the light. He moves them like furniture. In the barn,/the rancher spreads a blanket and their clothes fall off consider-/ably. They are technicians. It is a compliment. They clock and/clam like eels and the night goes mink. I want to be them. I want/to be like them. I want to fuck everything but I don't want to be/touched. It's awful, my watching: the refusal to participate, the/ogling and smug superiority, the approximation of a true desire./It's fake, but it isn't. It's art, but it isn't. They're pretending but/it doesn't matter because they're actually doing it, exhausting/themselves as the acting evaporates, peak peauty, that/moment—the swan dive, the little death, a bird flying into a/kitchen window, open or shut, this or nothing, it strips the/bolts. The camerman is standing very quietly. It looks like he/is weeping.",
+        "tags": "english"
     },
     {
         "id": "gooseberry",
-        "author": "Gooseberry Fool",
-        "title": "Amy Clampitt"
+        "title": "Gooseberry Fool",
+        "author": "Amy Clampitt",
+        "content": "/The gooseberry’s no doubt an oddity,/an outlaw or pariah even—thorny/and tart as any/kindergarten martinet, it can harbor/like a fernseed, on its leaves’ under-/side, bad news for pine trees,/whereas the spruce/resists the blister rust/it’s host to. That veiny Chinese/lantern, its stolid jelly/of a fruit, not only has/no aroma but is twice as tedious/as the wild strawberry’s sunburst/stem-end appendage: each one must/be between-nail-snipped at both extremities.//Altogether, gooseberry virtues/take some getting/used to, as does trepang,/tripe à la mode de Caen,/or having turned thirteen./The acerbity of all things green/and adolescent lingers in/it—the arrogant, shrinking,/prickling-in-every-direction thorn-/iness that loves no company except its,/or anyhow that’s what it gets:/bristling up through gooseberry ghetto sprawl/are braced thistles’ silvery, militantly symmetrical/defense machineries. Likewise inseparably en-/tangled in the disarray of an/uncultivated childhood, where gooseberry bushes (since/rooted out) once flourished, is/the squandered volupté of lemon-/yellow-petaled roses’ luscious flimflam—/an inkling of the mingling into one experience/of suave and sharp, whose supremely im-/probable and far-fetched culinary/embodiment is a gooseberry fool.//Tomorrow, having stumbled into/this trove of chief ingredients/(the other being very thickest cream)/I’ll demonstrate it for you. Ever since,/four summers ago, I first brought you,/a gleeful Ariel, the trophy/of a small sour handful,/I’ve wondered what not quite articulated thing/could render magical/the green globe of an unripe berry./I think now it was simply/the great globe itself’s too much to carry.///<em>December 1981</em>",
+        "tags": "english"
     },
     {
         "id": "hedonism",
-        "author": "On Hedonism",
-        "title": "Anne Carson"
+        "title": "On Hedonism",
+        "author": "Anne Carson",
+        "content": "/Beauty makes me hopeless. I don’t care why/anymore I just want to get away. When I look/at the city of Paris I long to wrap my legs/around it. When I watch you dancing there is a/heartless immensity like a sailor in a dead-calm/sea. Desires as round as peaches bloom in me/all night, I no longer gather what falls./",
+        "tags": "english"
     },
     {
         "id": "how-i-love",
-        "author": "How Do I Love You?",
-        "title": "Mary Oliver"
+        "title": "How Do I Love You?",
+        "author": "Mary Oliver",
+        "content": "/How do I love you?/Oh, this way and that way./Oh, happily. Perhaps/I may elaborate by//demonstration? Like this and/this, and/like this and//    <id4>no more words now</id4>",
+        "tags": "english"
     },
     {
         "id": "impossible",
-        "author": "During the impossible age of everyone",
-        "title": "ada limón"
+        "title": "During the impossible age of everyone",
+        "author": "ada limón",
+        "content": "/1./There are so many people who’ve come before us,/arrows and wagon wheels, obsidian tools, buffalo./Look out at the meadow, you can almost see them,/generations dissolved in the bluegrass and hay./I want to try and be terrific. Even for an hour.//2./If you walk long enough, your crowded head clears, like how all the cattle run off loudly as you approach./This fence is a good fence, but I doubt my own haywire will hold up to all this blank sky, so open and explicit./I’m like a fence, or a cow, or that word, yonder.//3./There is a slow tractor traffic hollering outside,/and I’d like not to be traffic, but the window shaking./Your shoes are piled up with mine, and the heat/comes on, makes a simple noise, a dog-yawn./People have done this before, but not us.",
+        "tags": "english"
     },
     {
         "id": "jeff",
-        "author": "You are Jeff",
-        "title": "richard siken"
+        "title": "You are Jeff",
+        "author": "richard siken",
+        "content": "/You're in the car with a beautiful boy, and he won't tell you that he loves you, but he loves you. And you feel like you've done something terrible, like robbed a liquor store, or swallowed pills, or shoveled yourself a grave in the dirt, and you're tired. You're in the car with a beautiful boy, and you're trying not to tell him that you love him, and you're trying to choke down the feeling, and you're trembling, but he reaches over and he touches you, like a preayer for which no words exist, and you feel your heart taking root in your body, like you've discovered something you didn't even have a name for./",
+        "tags": "english"
     },
     {
         "id": "lluvia",
-        "author": "Lluvia pasada",
-        "title": "Alfonsina Storni"
+        "title": "Lluvia pasada",
+        "author": "Alfonsina Storni",
+        "content": "/Siete días largos la lluvia monótona/Golpeó mi ventana./Siete días largos./El corazón mismo se llenó de agua.//Nubes en los labios,/En el pecho sombras,/Libros en las manos, las mejillas blancas./Siete días largos.../Las aceras húmedas, los negros paraguas.//Hoy nacieron cuatro rosas purpurinas/Y están en mi cara./Oro de los cielos puso ruiseñores/En todas las jaulas.//Sangre borbotea, los pies no se apoyan,/La carne es estrecha y el alma rebalsa;/Fluido que ahoga me rodea el cuerpo:/Abierto los poros no retengo el alma.//¡Oh lástima, lástima!/Tanta primavera que no logra taza/  <id1>Para ser bebida.</id1>/Tanta primavera que no logra llama/  <id1>Para ser quemada.</id1>//Tú ¿dónde te ocultas, tú, que nos has logrado/Todavía telas, redes, cribas, mallas,/Dónde enredarían mis flores azules/Vencidas de amores a dulces palabras?//¿Dónde las dos manos de acero y de seda/Que me tomarían en esta mañana/Solar, para nunca soltarme; las manos/que habrían de hacerme roja siendo blanca?//¡Oh, mi primavera que logró su llama!/¡Oh, mi primavera en sus manos fuertes/Perdida y gustada!/",
+        "tags": "spanish"
     },
     {
         "id": "lluvia-tr",
-        "author": "Lluvia pasada",
-        "title": "Alfonsina Storni (tr. me)"
+        "title": "Lluvia pasada",
+        "author": "Alfonsina Storni (tr. me)",
+        "content": "/For seven long days the rain/Beat monotonous on my window./Seven long days./My heart, flooded with water.//In my lips, clouds,/in my chest, shadows,/in my hands, books; cheeks white./Seven long days.../wet sidewalks, black umbrellas.//Today, in my face,/four purple roses are born./In all of the cages,/the heaven-gold put nightingales.//Blood gurgles, feet wobble,/the flesh tightens and the soul spills out;/drowning fluid surrounds my body,/pores open. I cannot hold back my soul.//Oh, pity, pity!/So much spring that fails to achieve the cup/  <id1>To be drunk.</id1>/So much spring that does not achieve the flame/  <id1>To be burned.</id1>//You, where do you hide, you, who still haven't/the cloths, nets, sieves, meshes/that they would entangle my flowers-blue/to be defeated by love? By sweet words?//Where are the hands of iron, of silk/that would take me from this morning/sunlit, never letting go; the hands/that would make me red, being white?//Oh, my spring, who achieved its flame!/Oh, my spring, in its violent hands/lost and fancied!/",
+        "tags": "english"
     },
     {
         "id": "mambo",
-        "author": "Borderline Mambo",
-        "title": "Rita Dove"
+        "title": "Borderline Mambo",
+        "author": "Rita Dove",
+        "content": "/As if the lid stayed put on the marmalade./As if you could get the last sip of champagne/out of the bottom of the fluted glass./As if we weren’t all dying, as if we all weren’t/going to die some time, as if we knew for certain/when, or how. As if the baseball scores made sense/to the toddler. As if the dance steps mattered, or there’s a point/where they don’t. For instance wheelchair. Heart flutter./Oxygen bottle mounted on the septuagenarian's back/at the state ballroom competitions—that’s Manny,/still pumping the mambo with his delicious slip/of an instructor, hip hip hooray. Mambo, for instance,/if done right, gives you a chance to rest: one beat in four./One chance in four, one chance in ten, a hundred, as if/we could understand what that means. Hooray. Keep/pumping. As if you could keep the lid on a secret/once the symptoms start to make sense. A second/instance, a respite. A third. Always that hope./If we could just scrape that last little bit/out, if only it wouldn’t bottom out/before they can decode the message/sent to the cells. Of course it matters when, even though/(because?) we live in mystery. For instance/Beauty. Love. Honor. As if we didn’t like/secrets. Point where it hurts. Of course we’ll tell.",
+        "tags": "english"
     },
     {
         "id": "omelet",
-        "author": "I wrote a good omelet",
-        "title": "nikki giovanni"
+        "title": "I wrote a good omelet",
+        "author": "nikki giovanni",
+        "content": "/I wrote a good omelet... and ate a hot poem.../after loving you//Buttoned my car... and drove my coat home... in the rain.../after loving you//I goed on red... and stopped on green... floating somewhere in between.../being here and being there.../after loving you//I rolled my bed... and turned down my hair... slightly confused but... I don't care.../Laid out my teeth... and gargled my gown... then I stood... and laid me down.../to sleep.../after loving you",
+        "tags": "english"
     },
     {
         "id": "party",
-        "author": "For Grace, after a party",
-        "title": "frank o'hara"
+        "title": "For Grace, after a party",
+        "author": "frank o'hara",
+        "content": "/    You do not always know what I am feeling./Last night in the warm spring air while I was/blazing my tirade against someone who doesn't/interest/           me, it was love for you that set me/afire,/         and isn't it odd? for in rooms full of/strangers my most tender feelings/                                    writhe and/bear the fruit of screaming. Put out your hand,/isn't there/              an ashtray, suddenly, there? beside/the bed? And someone you love enters the room/and says wouldn't/                      you like the eggs a little/different today?/                      And when they arrive they are/just plain scrambled eggs and the warm weather/is holding.",
+        "tags": "english"
     },
     {
         "id": "penny",
-        "author": "The Young Man's Song",
-        "title": "W.B. Yeats"
+        "title": "The Young Man's Song",
+        "author": "W.B. Yeats",
+        "content": "/I whispered, \"I am too young,\"  /And then, \"I am old enough\";   /Wherefore I threw a penny   /To find out if I might love.   /\"Go and love, go and love, young man,/If the lady be young and fair,\"   /Ah, penny, brown penny, brown penny,   /I am looped in the loops of her hair.   /   /Oh, love is the crooked thing,   /There is nobody wise enough/To find out all that is in it,   /For he would be thinking of love   /Till the stars had run away,   /And the shadows eaten the moon.   /Ah, penny, brown penny, brown penny,/One cannot begin it too soon. /",
+        "tags": "english"
     },
     {
         "id": "prufrock",
-        "author": "The Love Song of J. Alfred Prufrock",
-        "title": "T.S. Eliot"
+        "title": "The Love Song of J. Alfred Prufrock",
+        "author": "T.S. Eliot",
+        "content": "/    <i><id2>S’io credesse che mia risposta fosse</id2>/    <id2>A persona che mai tornasse al mondo,</id2>/    <id2>Questa fiamma staria senza piu scosse.</id2>/    <id2>Ma percioche giammai di questo fondo</id2>/    <id2>Non torno vivo alcun, s’i’odo il vero,</id2>/    <id2>Senza tema d’infamia ti rispondo.</id2></i>//Let us go then, you and I,/When the evening is spread out against the sky/Like a patient etherized upon a table;/Let us go, through certain half-deserted streets,/The muttering retreats/Of restless nights in one-night cheap hotels/And sawdust restaurants with oyster-shells:/Streets that follow like a tedious argument/Of insidious intent/To lead you to an overwhelming question...//Oh, do not ask, “What is it?”/Let us go and make our visit.//In the room the women come and go/Talking of Michelangelo.//The yellow fog that rubs its back upon the window-panes,/The yellow smoke that rubs its muzzle on the window-panes,/Licked its tongue into the corners of the evening,/Lingered upon the pools that stand in drains,/Let fall upon its back the soot that falls from chimneys,/Slipped by the terrace, made a sudden leap,/And seeing that it was a soft October night,/Curled once about the house, and fell asleep.//And indeed there will be time/For the yellow smoke that slides along the street,/Rubbing its back upon the window-panes;/There will be time, there will be time/To prepare a face to meet the faces that you meet;/There will be time to murder and create,/And time for all the works and days of hands/That lift and drop a question on your plate;/Time for you and time for me,/And time yet for a hundred indecisions,/And for a hundred visions and revisions,/Before the taking of a toast and tea.//In the room the women come and go/Talking of Michelangelo.//And indeed there will be time/To wonder, “Do I dare?” and, “Do I dare?”/Time to turn back and descend the stair,/With a bald spot in the middle of my hair —/(They will say: “How his hair is growing thin!”)/My morning coat, my collar mounting firmly to the chin,/My necktie rich and modest, but asserted by a simple pin —/(They will say: “But how his arms and legs are thin!”)/Do I dare/Disturb the universe?/In a minute there is time/For decisions and revisions which a minute will reverse.//For I have known them all already, known them all:/Have known the evenings, mornings, afternoons,/I have measured out my life with coffee spoons;/I know the voices dying with a dying fall/Beneath the music from a farther room./        <id2>So how should I presume?</id2>//And I have known the eyes already, known them all—/The eyes that fix you in a formulated phrase,/And when I am formulated, sprawling on a pin,/When I am pinned and wriggling on the wall,/Then how should I begin/To spit out all the butt-ends of my days and ways?/        <id2>And how should I presume?</id2>//And I have known the arms already, known them all—/Arms that are braceleted and white and bare/(But in the lamplight, downed with light brown hair!)/Is it perfume from a dress/That makes me so digress?/Arms that lie along a table, or wrap about a shawl./        <id2>And should I then presume?</id2>/        <id2>And how should I begin?</id2>//Shall I say, I have gone at dusk through narrow streets/And watched the smoke that rises from the pipes/Of lonely men in shirt-sleeves, leaning out of windows? ...//I should have been a pair of ragged claws/Scuttling across the floors of silent seas.//And the afternoon, the evening, sleeps so peacefully!/Smoothed by long fingers,/Asleep... tired... or it malingers,/Stretched on the floor, here beside you and me./Should I, after tea and cakes and ices,/Have the strength to force the moment to its crisis?/But though I have wept and fasted, wept and prayed,/Though I have seen my head (grown slightly bald) brought in upon a platter,/I am no prophet — and here’s no great matter;/I have seen the moment of my greatness flicker,/And I have seen the eternal Footman hold my coat, and snicker,/And in short, I was afraid.//And would it have been worth it, after all,/After the cups, the marmalade, the tea,/Among the porcelain, among some talk of you and me,/Would it have been worth while,/To have bitten off the matter with a smile,/To have squeezed the universe into a ball/To roll it towards some overwhelming question,/To say: “I am Lazarus, come from the dead,/Come back to tell you all, I shall tell you all”—/If one, settling a pillow by her head/        <id2>Should say: “That is not what I meant at all;</id2>/        <id2>That is not it, at all.”</id2>//And would it have been worth it, after all,/Would it have been worth while,/After the sunsets and the dooryards and the sprinkled streets,/After the novels, after the teacups, after the skirts that trail along the floor—/And this, and so much more?—/It is impossible to say just what I mean!/But as if a magic lantern threw the nerves in patterns on a screen:/Would it have been worth while/If one, settling a pillow or throwing off a shawl,/And turning toward the window, should say:/        <id2>“That is not it at all,</id2>/        <id2>That is not what I meant, at all.”</id2>//No! I am not Prince Hamlet, nor was meant to be;/Am an attendant lord, one that will do/To swell a progress, start a scene or two,/Advise the prince; no doubt, an easy tool,/Deferential, glad to be of use,/Politic, cautious, and meticulous;/Full of high sentence, but a bit obtuse;/At times, indeed, almost ridiculous—/Almost, at times, the Fool.//I grow old... I grow old.../I shall wear the bottoms of my trousers rolled.//Shall I part my hair behind?   Do I dare to eat a peach?/I shall wear white flannel trousers, and walk upon the beach./I have heard the mermaids singing, each to each.//I do not think that they will sing to me.//I have seen them riding seaward on the waves/Combing the white hair of the waves blown back/When the wind blows the water white and black./We have lingered in the chambers of the sea/By sea-girls wreathed with seaweed red and brown/Till human voices wake us, and we drown.",
+        "tags": "english"
     },
     {
         "id": "railway-car",
-        "author": "Written In Pencil In The Sealed Railway Car",
-        "title": "Dan Pagis (tr. Stephen Mitchell)"
+        "title": "Written In Pencil In The Sealed Railway Car",
+        "author": "Dan Pagis (tr. Stephen Mitchell)",
+        "content": "/here in this carload/i am eve/with abel my son/if you see my other son/cain son of man/tell him that i",
+        "tags": "english"
     },
     {
         "id": "skate",
-        "author": "After Skate",
-        "title": "Carol Muske-Dukes"
+        "title": "After Skate",
+        "author": "Carol Muske-Dukes",
+        "content": "/He glides in on his single wing, after the signs go up. After/the truck leaves with the bunkbeds, grill, broken hall mirror./After Scout is dropped off at the shelter. After the last look,//on the dying lawn. In the backyard, where the empty pool/stands open; he pops an ollie over the cracked patterns of tile:/tidal waves in neat squares. He kneels, checking angle against//depth. He lifts off where the board once leapt and leapt: cannon-/balls, swans: endless summer. He hurtles downward, kickturning,/sparks grinding hard on gunnite. Round the bend: the kidney,//the heart. The stone path where once glowed tiki torches at/the kingdom’s ukelele gate. He rockets out of the dead lots each/day, past swingsets and shut-off sprinklers, his board struck up//from whirlwind. Nobody’s home to the ownerless: he turns/inside their names, never minds ghosts, nothing in his wake.",
+        "tags": "english"
     },
     {
         "id": "sphinx",
-        "author": "The Second Coming",
-        "title": "W.B. Yeats"
+        "title": "The Second Coming",
+        "author": "W.B. Yeats",
+        "content": "/Turning and turning in the widening gyre   /The falcon cannot hear the falconer;/Things fall apart; the centre cannot hold;/Mere anarchy is loosed upon the world,/The blood-dimmed tide is loosed, and everywhere   /The ceremony of innocence is drowned;/The best lack all conviction, while the worst   /Are full of passionate intensity.//Surely some revelation is at hand;/Surely the Second Coming is at hand.   /The Second Coming! Hardly are those words out   /When a vast image out of <i>Spiritus Mundi</i>/Troubles my sight: somewhere in sands of the desert   /A shape with lion body and the head of a man,   /A gaze blank and pitiless as the sun,   /Is moving its slow thighs, while all about it   /Reel shadows of the indignant desert birds.   /The darkness drops again; but now I know   /That twenty centuries of stony sleep/Were vexed to nightmare by a rocking cradle,   /And what rough beast, its hour come round at last,   /Slouches towards Bethlehem to be born?",
+        "tags": "english"
     },
     {
         "id": "springtime",
-        "author": "It's spring and I'm in love with you",
-        "title": "unknown"
+        "title": "It's spring and I'm in love with you",
+        "author": "unknown",
+        "content": "/Spring came on my walk to the bus: I think I'm allowed to be ignorant. Fell on my shoulders, song quieter than whatever I was pumping into my ears at the time—I'm glad it's lighter, but one of us is heavier for it. The bikes in the pathway don't make it better. I am ready to sit under the dogwood with you, but we have places to be. Spring came and I was too busy wishing for the end of winter to notice. Maybe I'll appreciate it tomorrow.",
+        "tags": "english"
     },
     {
         "id": "stay",
-        "author": "Are You Going To Stay?",
-        "title": "Thomas Meyer"
+        "title": "Are You Going To Stay?",
+        "author": "Thomas Meyer",
+        "content": "/What was it I was going to say?/Slipped away probably because/it needn’t be said. At that edge//almost not knowing but second/guessing the gain, loss, or effect/of an otherwise hesitant remark.//Slant of light on a brass box. The way/a passing thought knots the heart./There’s nothing, nothing to say.",
+        "tags": "english"
     },
     {
         "id": "tomatoes",
-        "author": "Tomatoes",
-        "title": "joy sullivan"
+        "title": "Tomatoes",
+        "author": "joy sullivan",
+        "content": "/I waited so long for love/and suddenly, here it is/standing in the garden, hands full/of heirlooms hot from the sun.//Soon, we'll make a supper of them./Salted slabs between slices of bread./Your beard silvers. My hips ripen./The mail piles up.//Phone calls go unanswered. Forgive us./Our mouths are full of tomatoes./We are so busy/being small and hungry and alive./",
+        "tags": "english"
     },
     {
         "id": "torso",
-        "author": "Archaic Torso of Apollo",
-        "title": "Rilke (tr. Stephen Mitchell)"
+        "title": "Archaic Torso of Apollo",
+        "author": "Rilke (tr. Stephen Mitchell)",
+        "content": "/We cannot know his legendary head/with eyes like ripening fruit. And yet his torso/is still suffused with brilliance from inside,/like a lamp, in which his gaze, now turned to low,//gleams in all its power. Otherwise/the curved breast could not dazzle you so, nor could/a smile run through the placid hips and thighs/to that dark center where procreation flared.//Otherwise this stone would seem defaced/beneath the translucent cascade of the shoulders/and would not glisten like a wild beast's fur://would not, from all the borders of itself,/burst like a star: for here there is no place/that does not see you. You must change your life.",
+        "tags": "english"
     },
     {
         "id": "tyger",
-        "author": "The Tyger",
-        "title": "William Blake"
+        "title": "The Tyger",
+        "author": "William Blake",
+        "content": "/Tyger Tyger, burning bright, /In the forests of the night; /What immortal hand or eye, /Could frame thy fearful symmetry?//In what distant deeps or skies. /Burnt the fire of thine eyes?/On what wings dare he aspire?/What the hand, dare seize the fire?//And what shoulder, & what art,/Could twist the sinews of thy heart?/And when thy heart began to beat./What dread hand? & what dread feet?//What the hammer? what the chain,/In what furnace was thy brain?/What the anvil? what dread grasp./Dare its deadly terrors clasp?//When the stars threw down their spears /And water'd heaven with their tears:/Did he smile his work to see?/Did he who made the Lamb make thee?//Tyger Tyger burning bright,/In the forests of the night:/What immortal hand or eye,/Dare frame thy fearful symmetry?",
+        "tags": "english"
     },
     {
         "id": "versos",
-        "author": "Puedo escribir los versos más tristes esta noche",
-        "title": "Pablo Neruda"
+        "title": "Puedo escribir los versos más tristes esta noche",
+        "author": "Pablo Neruda",
+        "content": "/Puedo escribir los versos más tristes esta noche./Escribir, por ejemplo: 'La noche está estrellada,/y tiritan, azules, los astros, a lo lejos.'/El viento de la noche gira en el cielo y canta./Puedo escribir los versos más tristes esta noche./Yo la quise, y a veces ella también me quiso./En las noches como ésta la tuve entre mis brazos./La besé tantas veces bajo el cielo infinito./Ella me quiso, a veces yo también la quería./Cómo no haber amado sus grandes ojos fijos./Puedo escribir los versos más tristes esta noche./Pensar que no la tengo. Sentir que la he perdido./Oir la noche immensa, más inmensa sin ella./Y el verso cae al alma como al pasto el rocío./Qué importa que mi amor no pudiera guardarla./La noche está estrellada y ella no está conmigo./Eso es todo. A lo lejos alguien canta. A lo lejos./Mi alma no se contenta con haberla perdido./Como para acercarla mi mirada la busca./Mi corazón la busca, y ella no está conmigo./La misma noche que hace blanquear los mismos arboles./Nosotros, los de entonces, ya no somos los mismos./Ya no la quiero, es cierto pero cuánto la quise./Mi voz buscaba el viento para tocar su oído./De otro. Será de otro. Como antes de mis besos./Su voz, su cuerpo claro. Sus ojos infinitos./Ya no la quiero, es cierto, pero tal vez la quiero./Es tan corto al amor, y es tan largo el olvido./Porque en noches como ésta la tuve entre mis brazos,/mi alma no se contenta con haberla perdido./Aunque ésta sea el último dolor que ella me causa,/y éstos sean los últimos versos que yo le escribo./",
+        "tags": "spanish"
     }
 ]
