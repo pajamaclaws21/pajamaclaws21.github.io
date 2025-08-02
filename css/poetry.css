@@ -31,10 +31,17 @@ p.body {
 }
 
 hr {
-  margin-top: 25%;
   height: 0;
   border: 0;
   border-bottom: 1px solid black;
+}
+
+hr#line {
+  margin-top: 25%;
+}
+
+hr#collection-separator {
+  margin-top: 5%;
 }
 
 p.small {
