@@ -56,9 +56,18 @@ ul.small-poems > li {
   margin-top: 0;
 }
 
+ul#friendsItems {
+  font-weight: 300;
+  font-size: 12px;
+}
+
 ul {
   margin-top: 0;
   list-style: '-> ';
+}
+
+li#friends {
+  list-style-type: "↳ ";
 }
 
 ul.main-poems > li {
