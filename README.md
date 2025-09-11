@@ -1,6 +1,4 @@
-# PJ's GitHub Page... or, crispy-spork
-A site that contains links to all of my *other* sites... and expirements and stuff :~) <br>
-* /experiments/ -- my expirements & stuff.
+* /experiments/ -- my experiments & stuff.
 * /babytools/ -- need to move this, was an old project.
 * /blog/ -- blog entries.
 * /poetry/ -- poems. (index.html is index, poem.html is primary template, craigslist.html is secondary template)
