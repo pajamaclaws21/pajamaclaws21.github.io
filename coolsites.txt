@@ -5,9 +5,13 @@ https://wiki.xxiivv.com/
 https://esoteric.codes/
 https://www.evaotaku.com/
 https://doc.cat-v.org/bell_labs/
+https://timigi.com/
+https://www.cervantesvirtual.com/
+https://jku-vds-lab.at/tools/stratomex/
+https://wikiview.net/
 
 Video games:
-http://harmonyzone.org/
+http://harmonyzone.org/ (see the links page)
 https://blueberrysoft.ryliejamesthomas.net/
 https://thrompd.hinchy.co/
 https://www.redblobgames.com/
@@ -16,6 +20,8 @@ Developers/Coding:
 https://100r.co/
 https://orib.dev/
 https://9front.org/
+https://greg.technology/
+https://loadmo.re/
 
 Music:
 https://clavier36.com/about
