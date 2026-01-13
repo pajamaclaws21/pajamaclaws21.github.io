@@ -1,6 +1,18 @@
 A bunch of cool websites.
 --
-Random sites:
+https://www.crowdsupply.com/
+http://edbrowse.org/
+https://indieweb.org/
+https://henry.codes/
+https://bellard.org/
+https://folk.computer/pilot
+https://ookigame.com/
+https://landnotes.org/
+http://geacron.com/home-en/
+https://www.nderf.org/Archives/2_1998_2001.html
+https://nlp.stanford.edu/projects/glove/
+https://www.mikrotax.org/
+https://strange.website/
 https://wiki.xxiivv.com/
 https://esoteric.codes/
 https://www.evaotaku.com/
@@ -22,5 +34,6 @@ https://9front.org/
 https://greg.technology/
 https://loadmo.re/
 https://clavier36.com/about
-
-strudel
+https://strudel.cc/
+https://www.photopea.com/
+https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi
