@@ -7,7 +7,7 @@
 
 //the full URLs of all the sites in the ring
 var sites = [
-'https://pajamaclaws21.onrender.com'
+'https://pajamaclaws.net'
 ];
 
 //the name of the ring
