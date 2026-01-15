@@ -20,6 +20,7 @@
     // Get the poem's content & display it
     fetch(url).then(response => response.text())
       .then(response => {
+          alert(response);
           response = response.split("\n--\n");
           document.title = response[0];
           document.getElementById("title").innerText = response[0];
