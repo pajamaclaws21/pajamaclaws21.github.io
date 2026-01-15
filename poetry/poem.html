@@ -8,26 +8,29 @@
   <meta name="viewport" content="width=device-width initial-scale=0.70 user-scalable=no" />
 
 	<script>
-		  // Get the poem URL parameter & make the url
-      let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
-      let url = `https://pajamaclaws.net/poetry/raw/${poem}`;
+    console.log = function(x){alert("log: " + x)};
+    console.warn = function(x){alert("warn: " + x)};
+    console.error = function(x){alert("err: " + x)};
 
-      // Get the poem's content & display it
-      fetch(url).then(response => response.text())
-        .then(response => {
-            response = response.split("\n--\n");
-            document.title = response[0];
-            document.getElementById("title").innerText = response[0];
-            document.getElementById("author").innerText = response[1];
-            document.getElementById("body").innerHTML = response[2].replaceAll("\n", "<br>");
-            // Check if there's commentary attached to the poem
-            if (response[3]){
-              document.getElementById("commentary").innerHTML = response[3].replaceAll("\n", "<br>");
-              document.getElementById("commentary").hidden = false;
-              document.getElementById("line").hidden = false;
-            }
-        })
-        .catch(err => alert(err));
+    // Get the poem URL parameter & make the url
+    let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
+    let url = `https://pajamaclaws.net/poetry/raw/${poem}`;
+
+    // Get the poem's content & display it
+    fetch(url).then(response => response.text())
+      .then(response => {
+          response = response.split("\n--\n");
+          document.title = response[0];
+          document.getElementById("title").innerText = response[0];
+          document.getElementById("author").innerText = response[1];
+          document.getElementById("body").innerHTML = response[2].replaceAll("\n", "<br>");
+          // Check if there's commentary attached to the poem
+          if (response[3]){
+            document.getElementById("commentary").innerHTML = response[3].replaceAll("\n", "<br>");
+            document.getElementById("commentary").hidden = false;
+            document.getElementById("line").hidden = false;
+          }
+      })
 	</script>
 </head>
 
