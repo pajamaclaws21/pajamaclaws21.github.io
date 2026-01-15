@@ -8,11 +8,6 @@
   <meta name="viewport" content="width=device-width initial-scale=0.70 user-scalable=no" />
 
 	<script>
-    console.log = function(x){alert("log: " + x)};
-    console.warn = function(x){alert("warn: " + x)};
-    console.error = function(x){alert("err: " + x)};
-    console.log("Logging up");
-
     // Get the poem URL parameter & make the url
     let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
     let url = `https://pajamaclaws.net/poetry/raw/${poem}`;
@@ -20,7 +15,6 @@
     // Get the poem's content & display it
     fetch(url).then(response => response.text())
       .then(response => {
-          alert(response);
           response = response.split("\n--\n");
           document.title = response[0];
           document.getElementById("title").innerText = response[0];
@@ -46,6 +40,10 @@
   </p>
   <hr id="line" hidden>
   <p class="small" id="commentary" hidden></p>
+
+  <!-- delete -->
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+  <script>eruda.init();</script>
 </body>
 
 </html>
