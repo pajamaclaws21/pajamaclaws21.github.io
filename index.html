@@ -4,7 +4,6 @@
         <link rel="icon" type="image/x-icon" href="https://pajamaclaws.net/images/pj.ico">
 	    <script src="https://pajamaclaws.net/src/dropdowns.js"></script>
 	    <link rel="stylesheet" href="https://pajamaclaws.net/css/onionring.css">
-        <link rel="stylesheet" href="https://pajamaclawsnet/css/flex.css">
 	    <link rel="manifest" href="https://pajamaclaws.net/manifest.json">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
@@ -20,6 +19,35 @@
 
             a, a:visited {
                 color: #0000EE;
+            }
+
+            /* Making sidebar work*/
+
+            .container {
+                display: flex;
+            }
+
+            section {
+                width: 200px;
+            }
+
+            aside {
+                flex-grow: 1;
+                visibility: visible;
+            }
+
+            @media (any-pointer: coarse) (any-pointer: none) {
+                section {
+                    width: 100%;
+                }
+
+                .container {
+                    display: block;
+                }
+
+                aside {
+                    visibility: hidden;
+                }
             }
         </style>
 
