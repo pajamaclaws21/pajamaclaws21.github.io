@@ -25,7 +25,6 @@
 
             main {
                 display: flex;
-                flex-wrap: wrap;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -34,6 +33,7 @@
 
             section {
                 width: 80%;
+                padding: 1%;
             }
 
             aside {
@@ -44,16 +44,8 @@
             }
 
             @media (any-pointer: coarse) (pointer: none) {
-                section {
-                    width: 100%;
-                }
-
                 main {
-                    display: block;
-                }
-
-                aside {
-                    visibility: hidden;
+                    flex-wrap: wrap;
                 }
             }
         </style>
@@ -100,7 +92,7 @@
         </section>
         <aside>
 
-        <img src="https://pajamaclaws.net/images/quixote.png" width="80%">
+        <img src="https://pajamaclaws.net/images/quixote.png" width="50%">
 
         </aside>
         </main>
