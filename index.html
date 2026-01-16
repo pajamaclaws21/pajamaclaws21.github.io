@@ -8,6 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
         <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+
             * {
                 font-family: 'Times New Roman', Times, serif;
             }
@@ -25,10 +30,7 @@
 
             main {
                 display: flex;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
+                position: relative;
             }
 
             section {
@@ -50,6 +52,14 @@
                 margin-left: auto;
                 margin-right: auto;
                 display: block;
+            }
+
+            footer {
+                background-color: aliceblue;
+                text-align: center;
+                padding: 2%;
+                font-size: xx-small;
+                line-height: 150%
             }
 
             @supports (-webkit-touch-callout: none) {
@@ -105,8 +115,6 @@
 
         <br><br><br><br><br>
 
-        <small>goodbyee</small>
-
         </section>
         <aside>
 
@@ -114,5 +122,9 @@
 
         </aside>
         </main>
+        <footer>
+            goodbye :) <br>
+            c 2026 pajamclaws21
+        </footer>
     </body>
 </html>
