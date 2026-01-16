@@ -1,0 +1,32 @@
+/*
+Partial source - https://stackoverflow.com/a
+Posted by filoxo, modified by community. See post 'Timeline' for change history
+Retrieved 2026-01-16, License - CC BY-SA 4.0
+*/
+
+.container {
+    display: flex;
+}
+
+section {
+    width: 200px;
+}
+
+aside {
+    flex-grow: 1;
+    visibility: visible;
+}
+
+@media (any-pointer: coarse) (any-pointer: none) {
+    section {
+        width: 100%;
+    }
+
+    .container {
+        display: block;
+    }
+
+    aside {
+        visibility: hidden;
+    }
+}
