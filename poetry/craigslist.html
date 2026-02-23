@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Poetry for Grey</title>
+    <title>Love Poems</title>
     <link rel="manifest" href="https://pajamaclaws.net/manifest.json">
     <link rel="stylesheet" href="https://pajamaclaws.net/css/craigslist.css">
     <meta name="theme-color" content="#DDDDDD"/>
@@ -10,8 +10,7 @@
     <script>
         // Get the poem URL parameter & make the url
         let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
-        let source = window.location.href.split("pajamaclaws21")[1].split("/")[0];
-        let url = `https://pajamaclaws21${source}/poetry/raw/${poem}`;
+        let url = `https://pajamaclaws.net/poetry/raw/${poem}`;
 
         // Get the poem's content & display it
         fetch(url).then(response => response.text())
@@ -21,7 +20,7 @@
             document.getElementById("title").innerText = response[0];
             document.getElementById("author").innerText = response[1];
             document.getElementById("body").innerHTML = response[2].replaceAll("\n", "<br>");
-            // Check if there's commentary attached to the poem
+            // Check if there's a tag attached to the poem
             if (response[3]){
                 document.getElementById("tag").innerHTML = response[3];
             }
