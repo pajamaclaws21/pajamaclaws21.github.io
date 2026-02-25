@@ -10,7 +10,7 @@
     <script>
         // Get the poem URL parameter & make the url
         let poem = window.location.href.split("?")[1].split("=")[1]; // poem URL parameter
-        let url = `https://pajamaclaws.net/poetry/raw/${poem}`;
+        let url = `https://www.pajamaclaws.net/poetry/raw/${poem}`;
 
         // Get the poem's content & display it
         fetch(url).then(response => response.text())
