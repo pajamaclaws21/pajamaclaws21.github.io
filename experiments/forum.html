@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                font-family: monospace;
+            }
+
+            aside {
+                background-color: #dddddd;
+            }
+
+            aside, p {
+                padding: 5px;
+            }
+
+            a.mention {
+                background-color: #eeeeee;
+                padding: 1.5px;
+                border-radius: 10px;
+                text-decoration: none;
+                color: black;
+            }
+            
+            a.mention:hover {
+            	color: #555555;
+                text-decoration: underline;
+           	}
+        </style>
+    </head>
+    <body>
+        <script>
+            let url = "https://forum.snap.berkeley.edu/t/9637/posts.json";
+            fetch(url).then(response => response.json()).then(json => {
+                let posts = json["post_stream"]["posts"];
+                posts.forEach(post => {
+                    let div = document.createElement("div");
+                    div.innerHTML = `<p>
+                        <b>${post["username"]}</b> <small>${post["created_at"]}</small> <br>
+                        ${post["cooked"]} <br>
+                        <hr>`;
+                    document.getElementById("content").appendChild(div);
+                });
+            });
+        </script>
+
+
+        <div id="content"></div>
+    </body>
+</html>
