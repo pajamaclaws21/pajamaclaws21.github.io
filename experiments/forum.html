@@ -2,16 +2,24 @@
 <html>
     <head>
         <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+
             * {
                 font-family: monospace;
             }
 
             aside {
                 background-color: #dddddd;
+                max-width: fit-content;
+                width: auto;
             }
 
             aside, p {
                 padding: 5px;
+                max-width: 50vw;
             }
 
             a.mention {
@@ -34,6 +42,32 @@
             div.meta {
                 display: none;
             }
+
+            div.container {
+                display: flex;
+                position: relative;
+            }
+
+            div.content {
+                width: 60vw;
+            }
+
+            div.content > div {
+                max-width: 50vw;
+                padding-left: 1vw;
+            }
+
+            div.content > div > aside {
+                margin-left: 2.5vw;
+            }
+
+            div.sidebar {
+                max-width: 100%;
+                background-color: #dedede;
+                flex-grow: 1;
+                visibility: visible;
+                margin: 0;
+            }
         </style>
     </head>
     <body>
@@ -53,7 +87,9 @@
             });
         </script>
 
-
-        <div id="content"></div>
+        <div class="container">
+            <div id="content" class="content"></div>
+            <div id="sidebar" class="sidebar"></div>
+        </div>
     </body>
 </html>
