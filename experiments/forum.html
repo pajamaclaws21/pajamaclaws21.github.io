@@ -71,6 +71,7 @@
         </style>
     </head>
     <body>
+        <!-- to implement: search functionality, grabbing via id, grabbing via title -->
         <script>
             let url = "https://forum.snap.berkeley.edu/t/9637/posts.json";
             fetch(url).then(response => response.json()).then(json => {
@@ -87,6 +88,10 @@
             });
         </script>
 
+        <div class="searchbar">
+            <input type="text">
+            <button>Fetch!</button>
+        </div>
         <div class="container">
             <div id="content" class="content"></div>
             <div id="sidebar" class="sidebar"></div>
