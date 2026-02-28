@@ -26,6 +26,14 @@
             	color: #555555;
                 text-decoration: underline;
            	}
+
+            img.avatar {
+                border-radius: 2.5px;
+            }
+
+            div.meta {
+                display: none;
+            }
         </style>
     </head>
     <body>
@@ -36,6 +44,7 @@
                 posts.forEach(post => {
                     let div = document.createElement("div");
                     div.innerHTML = `<p>
+                        <img src="https://forum.snap.berkeley.edu/${post["avatar_template"].replace("{size}", "64")}" width="32" height="32" class="avatar">
                         <b>${post["username"]}</b> <small>${post["created_at"]}</small> <br>
                         ${post["cooked"]} <br>
                         <hr>`;
