@@ -25,11 +25,11 @@
                 color: black;
             }
 
-            a.wrapper, a.hide-underline {
+            a.wrapper, a.hide-underline, div.description > a {
                 text-decoration: none;
             }
 
-            h2.title:hover, a.hide-underline:hover {
+            h2.title:hover, a.hide-underline:hover, div.description > a:hover {
                 text-decoration: underline;
             }
             
@@ -59,7 +59,7 @@
     </head>
     <body>
         <span id="title"></span>
-        <h1>Glossary</h1><p>
+        <h1>Episcopal Glossary</h1><p>
         
         <script>
             var glossary;
@@ -105,12 +105,15 @@
 
         <br><br><br>
 
-        <div class="description">
+        <div class="description"><p>
             <a href="https://www.episcopalchurch.org/wp-json">Website API</a> <br>
-            I used /wp/v2 to get the glossary data, having followed <a href="https://developer.wordpress.org/rest-api/using-the-rest-api/discovery/">this guide</a> to discover the site's API and ctrl+F'd for "glossary" in order to find where I could batch-download the glossary pages. Then I downloaded every glossary entry, got only the information I needed, and cleaned it up into <a href="/experiments/episcopal-glossary.json">a json file</a>.
+            I used /wp/v2 to get the glossary data, having followed <a href="https://developer.wordpress.org/rest-api/using-the-rest-api/discovery/">this guide</a> to discover the site's API and ctrl+F'd for "glossary" in order to find where I could batch-download the glossary pages. Then I downloaded every glossary entry, got only the information I needed, and cleaned it up into <a href="/experiments/episcopal-glossary.json">a json file</a>.<br><br>
+
+            Other Episcopal resources: <a href="https://www.episcopalchurch.org">Website of the Episcopal Church</a>, <a href="https://www.bcponline.org/">Online Book of Common Prayer</a>, <a href="https://www.episcopalcommonprayer.org/">Standing Commission on Liturgy and Music</a>, <a href="https://lectionarypage.net">Online Lectionary</a>, <a href="https://episcopalarchives.org/">Episcopal Archives</a>,
+
 
             <br><br>
             <a href="/">take me home</a>
-        </div>
+        </p></div>
     </body>
 </html>
