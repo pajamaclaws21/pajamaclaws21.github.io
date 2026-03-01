@@ -6,15 +6,60 @@
         <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
             * {
-                font-family: 'Times New Roman', Times, serif;
+                font-family: "Roboto Mono", monospace;
+            }
+
+            a.title {
+                font-size: 20px;
+                font-weight: bold;
+                text-decoration: none;
+                color: black;
+            }
+
+            a.title:hover {
+                text-decoration: underline;
+            }
+            
+            div.entry {
+                padding: 5px;
             }
         </style>
     </head>
     <body>
-        <h1>Heading</h1><p>
+        <h1>Glossary</h1><p>
+        
+        <script>
+            var glossary;
+            fetch("https://www.pajamaclaws.net/experiments/episcopal-glossary.json")
+                .then(response => response.json())
+                .then(json => {
+                    glossary = json;
+                    json.forEach((entry, index) => {
+                        let div = document.createElement("div");
+                        div.classList.add("entry");
+                        div.innerHTML = `<a href="${entry[2]}" class="title" title="view on episcopal site">${entry[0]}</a><br><p>${entry[1]}</p>`;
+                        if (index%2 == 0){
+                            div.style.background = "white";
+                        } else {
+                            div.style.background = "#dedede";
+                        }
+                        document.getElementById("content").appendChild(div);
+                    });
+            });
+        </script>
+
+        <!-- to add: search... and organization -->
+
+        <div id="content">
+        </div>
+
+        <br><br><br>
+
         <a href="https://www.episcopalchurch.org/wp-json">Website API</a> <br>
-        I used /wp/v2 to get the glossary data, having followed <a href="https://developer.wordpress.org/rest-api/using-the-rest-api/discovery/">this guide</a> to discover the site's API and ctrl+F'd for "glossary" in order to find where I could batch-download the glossary pages.
+        I used /wp/v2 to get the glossary data, having followed <a href="https://developer.wordpress.org/rest-api/using-the-rest-api/discovery/">this guide</a> to discover the site's API and ctrl+F'd for "glossary" in order to find where I could batch-download the glossary pages. Then I downloaded every glossary entry, got only the information I needed, and cleaned it up into <a href="/experiments/episcopal-glossary.json">a json file</a>.
 
         <br><br>
         <a href="/">take me home</a>
