@@ -7,12 +7,17 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+            
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
 
             * {
                 font-family: "Roboto Mono", monospace;
             }
 
-            a.title {
+            h2.title {
                 font-size: 20px;
                 font-weight: bold;
                 text-decoration: none;
@@ -24,7 +29,21 @@
             }
             
             div.entry {
-                padding: 5px;
+                padding: 2.5%;
+            }
+
+            h1, div.description {
+                margin: 2.5%;
+            }
+
+            div.entry > p {
+                max-width: 60vw;
+            }
+
+            @supports (-webkit-touch-callout: none) {
+                div.entry > p {
+                    max-width: 100vw;
+                }
             }
         </style>
     </head>
@@ -33,6 +52,8 @@
         
         <script>
             var glossary;
+            var names;
+
             fetch("https://www.pajamaclaws.net/experiments/episcopal-glossary.json")
                 .then(response => response.json())
                 .then(json => {
@@ -40,28 +61,38 @@
                     json.forEach((entry, index) => {
                         let div = document.createElement("div");
                         div.classList.add("entry");
-                        div.innerHTML = `<a href="${entry[2]}" class="title" title="view on episcopal site">${entry[0]}</a><br><p>${entry[1]}</p>`;
+                        div.innerHTML = `<a href="${entry[2]}"><h2 class="title" title="view on episcopal site" id="${entry[0]}.toLowerCase()}">${entry[0]}</h2></a><br><p>${entry[1]}</p>`;
                         if (index%2 == 0){
-                            div.style.background = "white";
-                        } else {
                             div.style.background = "#dedede";
+                        } else {
+                            div.style.background = "#ffffff";
                         }
                         document.getElementById("content").appendChild(div);
                     });
             });
+
+            function glossarySearch(term){
+                if(names == undefined){names = glossary.map((entry) => entry[0])};
+                let index = names.filter((name) => name.toLowerCase().includes(term));
+                alert(index);
+            };
         </script>
 
         <!-- to add: search... and organization -->
+
+        <input type="text" placeholder="Search..." id="searchbar"><button onclick="glossarySearch(document.getElementById('searchbar').value)">Go!</button>
 
         <div id="content">
         </div>
 
         <br><br><br>
 
-        <a href="https://www.episcopalchurch.org/wp-json">Website API</a> <br>
-        I used /wp/v2 to get the glossary data, having followed <a href="https://developer.wordpress.org/rest-api/using-the-rest-api/discovery/">this guide</a> to discover the site's API and ctrl+F'd for "glossary" in order to find where I could batch-download the glossary pages. Then I downloaded every glossary entry, got only the information I needed, and cleaned it up into <a href="/experiments/episcopal-glossary.json">a json file</a>.
+        <div class="description">
+            <a href="https://www.episcopalchurch.org/wp-json">Website API</a> <br>
+            I used /wp/v2 to get the glossary data, having followed <a href="https://developer.wordpress.org/rest-api/using-the-rest-api/discovery/">this guide</a> to discover the site's API and ctrl+F'd for "glossary" in order to find where I could batch-download the glossary pages. Then I downloaded every glossary entry, got only the information I needed, and cleaned it up into <a href="/experiments/episcopal-glossary.json">a json file</a>.
 
-        <br><br>
-        <a href="/">take me home</a>
+            <br><br>
+            <a href="/">take me home</a>
+        </div>
     </body>
 </html>
