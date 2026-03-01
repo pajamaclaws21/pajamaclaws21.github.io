@@ -76,7 +76,7 @@
                     json.forEach((entry, index) => {
                         let div = document.createElement("div");
                         div.classList.add("entry");
-                        div.innerHTML = `<a href="${entry[2]}" class="wrapper"><h2 class="title" title="view on episcopal site" id="${sanitize(entry[0])}">${entry[0]}</h2></a><br><p>${entry[1]}</p><small><a href="#title" class="hide-underline">back to top</a></small>`;
+                        div.innerHTML = `<a href="${entry[2]}" class="wrapper"><h2 class="title" title="view on episcopal site" id="${sanitize(entry[0])}">${entry[0]}</h2></a><p>${entry[1]}</p><small><a href="#title" class="hide-underline">back to top</a></small>`;
                         if (index%2 == 0){
                             div.style.background = "#dedede";
                         } else {
