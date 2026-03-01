@@ -24,11 +24,11 @@
                 color: black;
             }
 
-            a.wrapper, a.searchresult {
+            a.wrapper, a.hide-underline {
                 text-decoration: none;
             }
 
-            h2.title:hover, a.searchresult:hover {
+            h2.title:hover, a.hide-underline:hover {
                 text-decoration: underline;
             }
             
@@ -57,6 +57,7 @@
         </style>
     </head>
     <body>
+        <span id="title"></span>
         <h1>Glossary</h1><p>
         
         <script>
@@ -74,7 +75,7 @@
                     json.forEach((entry, index) => {
                         let div = document.createElement("div");
                         div.classList.add("entry");
-                        div.innerHTML = `<a href="${entry[2]}" class="wrapper"><h2 class="title" title="view on episcopal site" id="${sanitize(entry[0])}">${entry[0]}</h2></a><br><p>${entry[1]}</p>`;
+                        div.innerHTML = `<a href="${entry[2]}" class="wrapper"><h2 class="title" title="view on episcopal site" id="${sanitize(entry[0])}">${entry[0]}</h2></a><br><p>${entry[1]}</p><br><small><a href="#title" class="hide-underline">back to top</a></small>"`;
                         if (index%2 == 0){
                             div.style.background = "#dedede";
                         } else {
@@ -88,7 +89,7 @@
                 if(names == undefined){names = glossary.map((entry) => entry[0])};
                 let hits = names.filter((name) => name.toLowerCase().includes(term));
                 let links = [];
-                hits.forEach((hit, index) => (links[index] = `<a class="searchresult" href="#${sanitize(hit)}">${hit}</a>`));
+                hits.forEach((hit, index) => (links[index] = `<a class="hide-underline" href="#${sanitize(hit)}">${hit}</a>`));
                 document.getElementById("results").innerHTML = links.join("; ");
             };
         </script>
