@@ -1,11 +1,18 @@
 User-agent: *
 Allow: /
-Allow: /blog
 Allow: /poetry/
 Allow: /experiments/
+Allow: /cool.html
 Allow: /webring.html
+Allow: /wishlist.html
+Allow: /weblog
+Allow: /weblog/
 Allow: /sitemap.xml
 Allow: /robots.txt
+Disallow: /old.html
+Disallow: /blog.html
+Disallow: /poetry/raw/
+Disallow: /blog
 Disallow: /blog/
 Disallow: /css/
 Disallow: /images/
@@ -13,6 +20,7 @@ Disallow: /src/
 Disallow: /templates/
 Disallow: /manifest.json
 Disallow: /offline.html
+Disallow: /babytools/
 Disallow: /README.md
 Disallow: /sw.js
 
