@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<url><loc>https://www.pajamaclaws21.net/poetry</loc></url>
-	<url><loc>https://www.pajamaclaws21.net/cool.html</loc></url>
-	<url><loc>https://www.pajamaclaws21.net/weblog</loc></url>
-	<url><loc>https://www.pajamaclaws21.net/webring.html</loc></url>
-	<url><loc>https://www.pajamaclaws21.net/experiments</loc></url>
-	<url><loc>https://www.pajamaclaws21.net/experiments/wbib3.html</loc></url>
-	<url><loc>https://www.pajamaclaws21.net/experiments/episcopal-glossary.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/</loc></url>
+	<url><loc>https://www.pajamaclaws.net/poetry</loc></url>
+	<url><loc>https://www.pajamaclaws.net/cool.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog</loc></url>
+	<url><loc>https://www.pajamaclaws.net/webring.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/experiments</loc></url>
+	<url><loc>https://www.pajamaclaws.net/experiments/wbib3.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/experiments/episcopal-glossary.html</loc></url>
 </urlset>
