@@ -90,11 +90,24 @@
     <br><br><br>
     <img id="imageDisplay">
     <script>
-      const history = [];
+      function formatUrl(url){
+        if(!( url.includes("://") || url.includes("http") )){
+          throw new Error("url passed to formatter needs a scheme (http/s). Typo?");
+        } else {
+          if( url[url.length - 1] != "/" ){
+            url+="/";
+          };
+          var scheme = url.split("://")[0];
+          url = url.split(`${scheme}://`)[1].split("/");
+          return `${scheme}|${url.join("|")}`;
+        };
+      };
+
+      var history = [];
 
       function accessor(url) {
         // Creates an AllOrigins URL to the desired resource.
-        return `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+        return `https://wbib4.backend.pajamaclaws.net/api/raw/${formatUrl(url)}`;
       }
 
       function replace(string, stringToReplace, thingReplacing) {
@@ -121,7 +134,7 @@
       
         if (ending == "png" || ending == "ico" || ending == "jpg" || ending == "jpeg" || ending == "svg" || ending == "gif" || ending == "webp") {
           
-          if (url.split("api.allorigins.win").length > 1) {
+          if (url.split("wbib4.pajamaclaws.net").length > 1) {
         document.getElementById("imageDisplay").src = url; // don't have to re-AllOrigins-ify an already done link
           } else {
           document.getElementById("imageDisplay").src = accessor(url); // display an un-AllOrigins-ified image
@@ -165,45 +178,5 @@
         }
       });
     </script>
-    <!--<script>
-      // Draggable DIV script from W3Schools
-      const elmnt = document.getElementById("panel");
-      dragElement();
-
-      function dragElement() {
-        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-        elmnt.onmousedown = dragMouseDown;
-      }
-
-      function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-      }
-
-      function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      }
-
-      function closeDragElement() {
-        /* stop moving when mouse button is released:*/
-        document.onmouseup = null;
-        document.onmousemove = null;
-      }
-    </script>-->
   </body>
 </html>
