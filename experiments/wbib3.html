@@ -94,9 +94,6 @@
         if(!( url.includes("://") || url.includes("http") )){
           throw new Error("url passed to formatter needs a scheme (http/s). Typo?");
         } else {
-          if( url[url.length - 1] != "/" ){
-            url+="/";
-          };
           var scheme = url.split("://")[0];
           url = url.split(`${scheme}://`)[1].split("/");
           return `${scheme}|${url.join("|")}`;
