@@ -69,7 +69,7 @@
                 return string.toLowerCase().replaceAll(/[^a-zA-Z0-9]+$/g, "").split(" ").join("");
             }
 
-            fetch("https://www.pajamaclaws.net/experiments/episcopal-glossary.json")
+            fetch("https://www.pajamaclaws.net/uploads/episcopal-glossary.json")
                 .then(response => response.json())
                 .then(json => {
                     glossary = json;

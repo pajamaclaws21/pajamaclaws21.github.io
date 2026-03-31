@@ -6,6 +6,8 @@ Allow: /experiments
 Allow: /experiments/
 Allow: /weblog
 Allow: /weblog/
+Allow: /church
+Allow: /church/
 Allow: /cool.html
 Allow: /webring.html
 Allow: /wishlist.html
@@ -25,5 +27,6 @@ Disallow: /offline.html
 Disallow: /babytools/
 Disallow: /README.md
 Disallow: /sw.js
+Disallow: /uploads/
 
-Sitemap: https://pajamaclaws21.github.io/sitemap.xml
+Sitemap: https://pajamaclaws.net/sitemap.xml
