@@ -30,9 +30,7 @@ window.addEventListener("load", (event) => {
         };
     }, 2000);
 
-    ide.addMessageListenerForAll((msg) => {
-        p.innerText += `\nReceived msg: ${msg}`;
-    });
+    ide.addMessageListenerForAll((msg) => {alert('msg received!')});
 });
 
 </script>
