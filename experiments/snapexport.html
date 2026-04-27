@@ -9,6 +9,9 @@ width="50%" height="50%" style="resize: both;"></iframe><br>
 
 <p id="0"></p>
 
+<input id="input" placeholder="function">
+<button onclick="ide.setVar('function', document.getElementById('input').value); ide.broadcast('parse');">Parse</button>
+
 <script>
 var iframe, ide, p;
 
@@ -26,11 +29,6 @@ window.addEventListener("load", (event) => {
             // Unless callback is >5 in which case cancel
         };
     }, 2000);
-
-    if (ide.getVar("api?") == "true"){
-        ide.setVar("function", "random");
-        ide.broadcast("parse");
-    }
 });
 
 </script>
