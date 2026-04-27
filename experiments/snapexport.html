@@ -13,18 +13,20 @@ width="50%" height="50%" style="resize: both;"></iframe><br>
 <input id="ident" placeholder="identifier">
 <button onclick="
 
-var ident = document.getElementById('ident').value;
+var ident, outputs, loop;
+
+ident = document.getElementById('ident').value;
 ide.setVar('function', document.getElementById('func').value);
 ide.broadcast(`parse${ident}`);
 
-var outputs = ide.getVar('output').asJSON();
-alert(outputs);
+outputs = ide.getVar('output').asJSON();
 
-//setInterval(()=>{
+loop = setInterval(()=>{if (Object.hasOwn(outputs, ident)){
 
+document.getElementById('0').innerText = outputs[ident];
+clearInterval(loop);
 
-
-//}, 500);
+}}, 500);
 
 // continue to check list for identifier until we find one
 
