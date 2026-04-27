@@ -29,6 +29,10 @@ window.addEventListener("load", (event) => {
             // Unless callback is >5 in which case cancel
         };
     }, 2000);
+
+    ide.addMessageListenerForAll((msg) => {
+        p.innerText += `\nReceived msg: ${msg}`;
+    });
 });
 
 </script>
