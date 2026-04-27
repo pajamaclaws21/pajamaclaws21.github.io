@@ -17,7 +17,7 @@ var ident = document.getElementById('ident').value;
 ide.setVar('function', document.getElementById('func').value);
 ide.broadcast(`parse${ident}`);
 
-var outputs = JSON.parse(ide.getVar('output').asJSON());
+var outputs = ide.getVar('output').asJSON();
 alert(outputs);
 
 //setInterval(()=>{
