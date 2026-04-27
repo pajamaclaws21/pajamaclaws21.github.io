@@ -16,7 +16,7 @@ width="50%" height="50%" style="resize: both;"></iframe><br>
 var ident = document.getElementById('ident').value;
 ide.setVar('function', document.getElementById('func').value);
 ide.broadcast(`parse${ident}`);
-alert(ide.getVar('output').asArray());
+alert(ide.getVar('output').asArray()[0]);
 
 //setInterval(()=>{
 
