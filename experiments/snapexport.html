@@ -7,12 +7,22 @@
 <iframe id="snap" src="https://www.pajamaclaws.net/Snap/snap.html#open:https://www.pajamaclaws.net/Snap/Examples/export%20to%20js.xml"
 width="50%" height="50%" style="resize: both;"></iframe><br>
 
-<p id="0"></p>
-
-<input id="func" placeholder="function">
-<input id="ident" placeholder="identifier">
-
 <script>
+var snapWindow = document.getElementById('snap');
+var ide = false;
+
+window.addEventListener("load", (event) => {
+    var loop;
+    loop = setInterval(() => {
+        try {
+            ide = snapWindow.contentWindow.world.children[0];
+            clearInterval(loop);
+        } catch (err) {
+            console.err(err);
+        };
+    }, 100);
+});
+
 function callSnap(functionName, inputs, identifier){
     var result, loop;
     ide.setVar('function', functionName);
@@ -21,7 +31,7 @@ function callSnap(functionName, inputs, identifier){
 
     return new Promise((resolve, reject) => {
         loop = setInterval(()=>{
-            result = JSON.parse(ide.getVar('output').asJSON());
+            result = JSON.parse(ide.getVar('snap exports: output').asJSON());
             if(Object.hasOwn(result, identifier)){
                 clearInterval(loop);
                 resolve(result[identifier])
@@ -29,31 +39,6 @@ function callSnap(functionName, inputs, identifier){
         }, 100);
     });
 }
-</script>
-
-<button onclick="
-callSnap('random', '', 'afueefiuwioin').then((response) => {alert(response)});
-">Parse</button>
-
-<script>
-var iframe, ide, p;
-
-window.addEventListener("load", (event) => {
-    iframe = document.getElementById('snap');
-    p = document.getElementById('0');
-
-    setTimeout(() => {
-        try {
-            ide = iframe.contentWindow.world.children[0];
-            p.innerText = ide;
-        } catch (err) {
-            p.innerText = err;
-            // Try again...
-            // Unless callback is >5 in which case cancel
-        };
-    }, 2000);
-});
-
 </script>
 
 </body>
