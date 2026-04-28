@@ -11,25 +11,28 @@ width="50%" height="50%" style="resize: both;"></iframe><br>
 
 <input id="func" placeholder="function">
 <input id="ident" placeholder="identifier">
+
+<script>
+function callSnap(functionName, inputs, identifier){
+    var result, loop;
+    ide.setVar('function', functionName);
+    ide.setVar('input', ide.newList(inputs)); // I dunno abt this one
+    ide.broadcast(`parse${identifier}`);
+
+    return new Promise((resolve, reject) => {
+        loop = setInterval(()=>{
+            result = JSON.parse(ide.getVar('output').asJSON());
+            if(Object.hasOwn(result, identifier)){
+                clearInterval(loop);
+                resolve(result[identifier])
+            }
+        }, 100);
+    });
+}
+</script>
+
 <button onclick="
-
-var ident, outputs, loop;
-
-ident = document.getElementById('ident').value;
-ide.setVar('function', document.getElementById('func').value);
-ide.broadcast(`parse${ident}`);
-
-outputs = ide.getVar('output').asJSON();
-
-loop = setInterval(()=>{if (Object.hasOwn(outputs, ident)){
-
-document.getElementById('0').innerText = outputs[ident];
-clearInterval(loop);
-
-}}, 500);
-
-// continue to check list for identifier until we find one
-
+callSnap('random', '', 'afueefiuwioin').then((response) => {alert(response)});
 ">Parse</button>
 
 <script>
