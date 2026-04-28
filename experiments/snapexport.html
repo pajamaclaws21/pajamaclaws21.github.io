@@ -25,8 +25,8 @@ callSnap(func, '', id).then((output) => {
 <p id="output-example"></p>
 
 <script>
-var snapWindow = document.getElementById('snap');
 var ide = false;
+var snapWindow = document.getElementById('snap'); // Change this to the ID of your iFrame
 
 window.addEventListener("load", (event) => {
     var loop;
@@ -42,8 +42,8 @@ window.addEventListener("load", (event) => {
 
 function callSnap(functionName, inputs, identifier){
     var result, loop;
-    ide.setVar('function', functionName);
-    ide.setVar('input', ide.newList(inputs)); // I dunno abt this one
+    ide.setVar('snap exports: function name', functionName);
+    ide.setVar('snap exports: input', ide.newList(inputs)); // I dunno abt this one
     ide.broadcast(`parse${identifier}`);
 
     return new Promise((resolve, reject) => {
