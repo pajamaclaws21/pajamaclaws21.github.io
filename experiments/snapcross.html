@@ -73,12 +73,15 @@ function snapAPI(sel, par){
     }, 100);
 };
 
+// To-do: implement functionality to turn multi-dimensional JS arrays --> Snap! lists
+// ... and vice-versa
+
 // callSnapC: call Snap! functions in JS from cross-origin frames
 // having to use promises makes this function look super ugly but I hope it is readable
 // does the same thing as callSnap from /experiments/snapexport.html
 function callSnapC(functionName, inputs, identifier){
     var result, loop;
-    snapAPI('setVar', ['snap exports: function name', 'functionName']).then(()=>{
+    snapAPI('setVar', ['snap exports: function name', functionName]).then(()=>{
     snapAPI('setVar', ['snap exports: input', ide.newList(inputs)]).then(()=>{
     snapAPI('broadcast', [`parse${identifier}`]).then(()=>{
     
