@@ -83,7 +83,8 @@ function snapAPI(sel, par){
 function callSnapC(functionName, inputs, identifier){
     var result, loop;
     snapAPI('setVar', ['snap exports: function name', functionName]).then(()=>{
-    snapAPI('setVar', ['snap exports: input', ide.newList(inputs)]).then(()=>{
+    snapAPI('newList', [inputs]).then((inputList)=>{
+    snapAPI('setVar', ['snap exports: input', inputList]).then(()=>{
     snapAPI('broadcast', [`parse${identifier}`]).then(()=>{
     
     return new Promise((resolve, reject) => {
@@ -99,7 +100,7 @@ function callSnapC(functionName, inputs, identifier){
         }, 100);
     });
 
-    });});});
+    });});});});
 }
 </script>
 
