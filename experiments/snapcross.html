@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Export Snap! --> JS</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<iframe id="snap" src="https://snap.berkeley.edu/snap/snap.html#present:Username=pajamaclaws21&ProjectName=Snap!%20API%20Cross-Origin%20Example"
+width="50%" height="50%" style="resize: both;"></iframe><br>
+
+<button onclick="
+snapAPI('getVar', ['foo']).then((response) => {alert(response)});
+">Try it out!</button>
+
+<script>
+var ide = false;
+var output;
+var snapWindow = document.getElementById('snap'); // Change this to the ID of your iFrame
+
+// 
+window.addEventListener('message', (event) => {
+    output = event.data.response;
+}, false);
+
+window.addEventListener("load", (event) => {
+    var loop;
+    loop = setInterval(() => {
+        try {
+            ide = snapWindow.contentWindow;
+            clearInterval(loop);
+        } catch (err) {
+            console.err(err);
+        };
+    }, 100);
+});
+
+// this is designed only for 1 request at a time
+// maybe someone else can amodify this?
+function snapAPI(sel, par){
+    var loop;
+    output = false;
+    ide.postMessage({selector: sel, params: par}, "*"); // send message to IDE
+    return new Promise((resolve, reject) => {
+        loop = setInterval(()=>{
+            if (output){
+                clearInterval(loop); // end the loop
+                resolve(output);
+            }
+        });
+    }, 100);
+};
+
+
+function callSnap(functionName, inputs, identifier){
+    var result, loop;
+    ide.setVar('snap exports: function name', functionName);
+    ide.setVar('snap exports: input', ide.newList(inputs)); // I dunno abt this one
+    ide.broadcast(`parse${identifier}`);
+
+    return new Promise((resolve, reject) => {
+        loop = setInterval(()=>{
+            result = JSON.parse(ide.getVar('snap exports: output').asJSON());
+            if(Object.hasOwn(result, identifier)){
+                clearInterval(loop);
+                resolve(result[identifier])
+            }
+        }, 100);
+    });
+}
+</script>
+
+</body>
+</html>
