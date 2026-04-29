@@ -33,9 +33,10 @@ callSnapC(func, '', id).then((output) => {
 
 
 <script>
+var snapWindow = document.getElementById('snap'); // Change this to the ID of your iFrame
 var crossIDE = false;
 var crossOutput;
-var snapWindow = document.getElementById('snap'); // Change this to the ID of your iFrame
+const waitingValue = "JAVASCRIPT IS WAITING ON AN OUTPUT";
 
 // load the Snap! contentwindow (for API access) into crossIDE variable
 // every 100ms after the window loads, check if you can access the contentWindow
@@ -60,12 +61,12 @@ window.addEventListener('message', (event) => {
 // designed for only 1 request at a time -- link through .then; see callSnapC
 function snapAPI(sel, par){
     var loop;
-    crossOutput = false;
+    crossOutput = waitingValue;
     crossIDE.postMessage({selector: sel, params: par}, "*"); // send message to IDE
     // every 100ms, see if the API call has been answered
     return new Promise((resolve, reject) => {
         loop = setInterval(()=>{
-            if (crossOutput){
+            if (crossOutput != waitingValue){
                 clearInterval(loop); // end the loop
                 resolve(crossOutput);
             }
