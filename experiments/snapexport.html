@@ -28,6 +28,8 @@ callSnap(func, '', id).then((output) => {
 var ide = false;
 var snapWindow = document.getElementById('snap'); // Change this to the ID of your iFrame
 
+// load the Snap! IDE (for API access) into ide variable
+// every 100ms after the window loads, check if you can access the IDE
 window.addEventListener("load", (event) => {
     var loop;
     loop = setInterval(() => {
@@ -40,6 +42,8 @@ window.addEventListener("load", (event) => {
     }, 100);
 });
 
+// callSnap: call Snap! functions in JS from same-origin frames
+// does the same thing as callSnapC from /experiments/snapcross.html
 function callSnap(functionName, inputs, identifier){
     var result, loop;
     ide.setVar('snap exports: function name', functionName);
@@ -47,6 +51,7 @@ function callSnap(functionName, inputs, identifier){
     ide.broadcast(`parse${identifier}`);
 
     return new Promise((resolve, reject) => {
+        // every 100ms, see if the function has returned a value
         loop = setInterval(()=>{
             result = JSON.parse(ide.getVar('snap exports: output').asJSON());
             if(Object.hasOwn(result, identifier)){
