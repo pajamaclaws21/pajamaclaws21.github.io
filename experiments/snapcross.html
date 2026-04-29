@@ -6,12 +6,31 @@
 </head>
 <body>
 
-<iframe id="snap" src="https://snap.berkeley.edu/snap/snap.html#present:Username=pajamaclaws21&ProjectName=Snap!%20API%20Cross-Origin%20Example"
-width="50%" height="50%" style="resize: both;"></iframe><br>
+<iframe id="snap" src="https://snap.berkeley.edu/snap/snap.html#present:Username=pajamaclaws21&ProjectName=export%20to%20js" width="50%" height="50%" style="resize: both;"></iframe><br>
 
+<p>Try out calling the Snap<em>!</em> API on a cross-origin frame:</p>
 <button onclick="
 snapAPI('getVar', ['foo']).then((response) => {alert(response)});
-">Try getting the "foo" variable!</button>
+">Get the "foo" variable</button>
+
+<br><br>
+
+<p>Try out running functions from Snap<em>!</em> on a cross-origin frame:</p>
+<input id="func" placeholder="function name">
+<input id="id" placeholder="identifier">
+<button onclick="
+
+let func = document.getElementById('func').value;
+let id = document.getElementById('id').value;
+let log = document.getElementById('log');
+
+callSnapC(func, '', id).then((output) => {
+    log.innerText += `\nThe output to ${func}:${id} was ${output}`;
+});
+
+">Run</button>
+<p id="log"></p>
+
 
 <script>
 var crossIDE = false;
