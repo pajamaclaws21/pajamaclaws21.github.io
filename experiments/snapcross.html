@@ -14,20 +14,17 @@ snapAPI('getVar', ['foo']).then((response) => {alert(response)});
 ">Try it out!</button>
 
 <script>
-var ide = false;
-var output;
+var crossIDE = false;
+var crossOutput;
 var snapWindow = document.getElementById('snap'); // Change this to the ID of your iFrame
 
-// 
-window.addEventListener('message', (event) => {
-    output = event.data.response;
-}, false);
-
+// load the Snap! contentwindow (for API access) into crossIDE variable
+// every 100ms after the window loads, check if you can access the contentWindow
 window.addEventListener("load", (event) => {
     var loop;
     loop = setInterval(() => {
         try {
-            ide = snapWindow.contentWindow;
+            crossIDE = snapWindow.contentWindow;
             clearInterval(loop);
         } catch (err) {
             console.err(err);
@@ -35,38 +32,51 @@ window.addEventListener("load", (event) => {
     }, 100);
 });
 
-// this is designed only for 1 request at a time
-// maybe someone else can amodify this?
+// when Snap! responds to API call, store it in crossOutput
+window.addEventListener('message', (event) => {
+    crossOutput = event.data.response;
+}, false);
+
+// call the Snap! API on cross-origin frames
+// designed for only 1 request at a time -- link through .then; see callSnapC
 function snapAPI(sel, par){
     var loop;
-    output = false;
-    ide.postMessage({selector: sel, params: par}, "*"); // send message to IDE
+    crossOutput = false;
+    crossIDE.postMessage({selector: sel, params: par}, "*"); // send message to IDE
+    // every 100ms, see if the API call has been answered
     return new Promise((resolve, reject) => {
         loop = setInterval(()=>{
-            if (output){
+            if (crossOutput){
                 clearInterval(loop); // end the loop
-                resolve(output);
+                resolve(crossOutput);
             }
         });
     }, 100);
 };
 
-
-function callSnap(functionName, inputs, identifier){
+// callSnapC: call Snap! functions in JS from cross-origin frames
+// having to use promises makes this function look super ugly but I hope it is readable
+// does the same thing as callSnap from /experiments/snapexport.html
+function callSnapC(functionName, inputs, identifier){
     var result, loop;
-    ide.setVar('snap exports: function name', functionName);
-    ide.setVar('snap exports: input', ide.newList(inputs)); // I dunno abt this one
-    ide.broadcast(`parse${identifier}`);
-
+    snapAPI('setVar', ['snap exports: function name', 'functionName']).then(()=>{
+    snapAPI('setVar', ['snap exports: input', ide.newList(inputs)]).then(()=>{
+    snapAPI('broadcast', [`parse${identifier}`]).then(()=>{
+    
     return new Promise((resolve, reject) => {
+        // every 100ms, see if the function has been executed
         loop = setInterval(()=>{
-            result = JSON.parse(ide.getVar('snap exports: output').asJSON());
-            if(Object.hasOwn(result, identifier)){
-                clearInterval(loop);
-                resolve(result[identifier])
-            }
+            snapAPI('getVar', ['snap exports: output']).then((value) => {
+                result = JSON.parse(value).asJSON();
+                if(Object.hasOwn(result, identifier)){
+                    clearInterval(loop);
+                    resolve(result[identifier]);
+                }
+            });
         }, 100);
     });
+
+    });});});
 }
 </script>
 
