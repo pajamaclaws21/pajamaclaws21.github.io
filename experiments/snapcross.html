@@ -90,9 +90,12 @@ function callSnapC(functionName, inputs, identifier){
         // every 100ms, see if the function has returned a value
         loop = setInterval(()=>{
             snapAPI('getVar', ['snap exports: output']).then((value) => {
-                alert(JSON.stringify(value));
-                alert(JSON.stringify(value.find((element) => Object.hasOwn(element, "contents"))));
-                //alert(JSON.stringify(value.find((element) => element["contents"][0] == identifier)));
+                alert(
+                    JSON.stringify(
+                        value.find((element) => 
+                            Object.hasOwn(element, "contents") && element["contents"][0] == identifier
+                )));
+                
                 result = JSON.parse(JSON.stringify(value));
                 if(Object.hasOwn(result, identifier)){
                     clearInterval(loop);
