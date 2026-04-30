@@ -92,7 +92,7 @@ function callSnapC(functionName, inputs, identifier){
             snapAPI('getVar', ['snap exports: output']).then((value) => {
                 // sanitize the dictionary output
                 value = JSON.parse(JSON.stringify(value));
-                alert(Object.getOwnPropertyNames(value));
+                alert(JSON.stringify(value.contents));
 
                 /*alert(
                     JSON.stringify(
