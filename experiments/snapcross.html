@@ -25,6 +25,7 @@ let id = document.getElementById('id').value;
 let log = document.getElementById('log');
 
 callSnapC(func, '', id).then((output) => {
+    alert(output);
     log.innerText += `\nThe output to ${func}:${id} was ${output}`;
 });
 
@@ -96,11 +97,11 @@ function callSnapC(functionName, inputs, identifier){
                     result = value.contents.find((element) => 
                         element.contents[0] == identifier
                     ).contents[1];
-                    alert(result);
+
                     clearInterval(loop);
                     resolve(result);
                 } catch (err) {
-                    alert(err);
+                    console.err(err);
                 }
             });
         }, 1000);
