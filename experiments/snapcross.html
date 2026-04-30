@@ -24,10 +24,12 @@ let func = document.getElementById('func').value;
 let id = document.getElementById('id').value;
 let log = document.getElementById('log');
 
+try {
 callSnapC(func, '', id).then((output) => {
     alert(output);
     log.innerText += `\nThe output to ${func}:${id} was ${output}`;
 });
+} catch (err) {alert(err)};
 
 ">Run</button>
 <p id="log"></p>
