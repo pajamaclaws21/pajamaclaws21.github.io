@@ -96,10 +96,11 @@ function callSnapC(functionName, inputs, identifier){
                     result = value.contents.find((element) => 
                         element.contents[0] == identifier
                     ).contents[1];
+                    alert(result);
                     clearInterval(loop);
                     resolve(result);
                 } catch (err) {
-                    console.err(err);
+                    alert(err);
                 }
             });
         }, 1000);
