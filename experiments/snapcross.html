@@ -91,15 +91,10 @@ function callSnapC(functionName, inputs, identifier){
             snapAPI('getVar', ['snap exports: output']).then((value) => {
                 // sanitize the dictionary output
                 value = JSON.parse(JSON.stringify(value));
-                try {
-                    result = value.contents.find((element) => 
-                        element.contents[0] == identifier
-                    ).contents[1];
-
+                result = value.contents.find((element) => element.contents[0] == identifier).contents[1];
+                if(result != "undefined"){
                     clearInterval(loop);
                     resolve(result);
-                } catch (err) {
-                    console.err(err);
                 }
             });
         }, 100);
