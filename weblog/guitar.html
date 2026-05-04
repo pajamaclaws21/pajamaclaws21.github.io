@@ -36,7 +36,6 @@
         <b>Parts list:</b>
         <ul>
             <li>Raspberry Pi (either Zero 2 W or 3B?)</li>
-            <li>This touchscreen LCD I need to check...</li>
             <li><a href="https://www.tindie.com/products/allexok/pikokey-mini-hid-usb-mechanical-keyboard/">PikoKey</a> keyboard</li>
             <li><a href="https://www.pjrc.com/store/teensy41.html">Teensy 4.1</a> for signal processing</li>
             <li><a href="https://www.pjrc.com/store/teensy3_audio.html">Teensy Audio Shield</a> for audio processing</li>
@@ -44,15 +43,28 @@
             <li>B10K potentiometers -- x6, like Hothouse</li>
             <li>Toggle switches -- x4</li>
             <li>LEDs -- x8</li>
-            <li>Joystick -- x1</li>
+            <li>Joystick -- x1?</li>
             <li>1/4in audio jacks -- x2</li>
             <li><a href="https://www.adafruit.com/product/4313">Small Adafruit screen</a> + according breakout board & ribbon cable</li>
+            <li>probably another, slightly larger adafruit screen:</li>
+            <ul>
+                <li>Adafruit 1680 (5", 800x480) w/ 1590: easily comes out to $70...</li>
+            </ul>
+            <!-- RAKwireless WisBlock Meshtastic Starter Kit US915 SKU 116016 -->
+            <li>MCP23017 for GPIO expansion (my Pi may not have enough IO ports..) -- x2?</li>
+            <li>L7805CV for voltage regulation (used in SparkFun demo) -- x1?</li>
+            <li>LM258P for operational amplifier (used in SparkFun demo) -- x1?</li>
+            <li>MCP3204 (12-bit, 4-channel) as an analog-to-digital converter. -- x4?</li>
+            <b>Total cost: ~$300</b>
         </ul>
 
         The main appeal of this to me is that the pi can flash the pedal information onto the pedal and then boom you can play it! So the pedal and the computer are two separate chipsets in the same container. Yup yup yup!
 
         <br><br>
         I found these two tutorials where people built guitar pedals slash instruments generally with a teensy, which is the audioo board I'm using, so I'll attach them here: <a href="https://ccrma.stanford.edu/courses/250a-spring-2021/labs/2/">Stanford</a>, <a href="https://learn.sparkfun.com/tutorials/proto-pedal-example-programmable-digital-pedal/all">SparkFun</a>.
+
+        <br><br>
+        I didn't originally realize I needed ADCs, but the Pi doesn't have them built-in. In order to use the joysticks & potentiometers, I needed them. So I landed on the MCP3204s because they can be used with gpiozero. The linked Sparkfun article also mentioned using op amps & linear voltage regulators, so I just bought those parts off of <a href="https://www.mouser.com/">mouser</a> which may be my favorite online electronics part shop.
 
         <br><br>
         <a href="/">take me home</a>
