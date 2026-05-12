@@ -39,14 +39,15 @@
             <li><a href="https://www.pjrc.com/store/teensy41.html">Teensy 4.1</a> ($30) x1</li>
             <li><a href="https://www.pjrc.com/store/teensy3_audio.html">Audio Shield</a> for audio processing ($20) x1</li>
             <li>P-channel MOSFETs -- x8</li>
-            <li>B10K potentiometers -- x6, like Hothouse</li>
+            <li>B10K potentiometers -- x6</li>
             <li>Toggle switches -- x4</li>
             <li>LEDs -- x8</li>
             <li>Joystick -- x1?</li>
             <li>1/4in audio jacks -- x2</li>
             <li>ST7920 12864 LCD screen ($15) x1</li>
             <li>L7805CV for voltage regulation, x1</li>
-            <li>LM258P for operational amplifier, x1</li>
+            <li>LM258P for operational amplifier, x?</li>
+            <li>DACs, x2?</li>
             <b>Total cost: ???</b>
         </ul>
 
@@ -56,7 +57,18 @@
         I found these two tutorials where people built guitar pedals slash instruments generally with a teensy, which is the board I'm using, so I'll attach them here: <a href="https://ccrma.stanford.edu/courses/250a-spring-2021/l?</abs/2/">Stanford</a>, <a href="https://learn.sparkfun.com/tutorials/proto-pedal-example-programmable-digital-pedal/all">SparkFun</a>.
 
         <br><br>
-        I didn't originally realize I needed ADCs, but in order to use the joysticks & potentiometers, I needed them. So I landed on the MCP3204s because they can be used with gpiozero. The linked Sparkfun article also mentioned using op amps & linear voltage regulators, so I just bought those parts off of <a href="https://www.mouser.com/">mouser</a> which may be my favorite online electronics part shop.
+        
+        The linked Sparkfun article also mentioned using op amps & linear voltage regulators, so I just bought those parts off of <a href="https://www.mouser.com/">mouser</a> which may be my favorite online electronics part shop.
+
+        <br><br>
+        I have heard that some effects (fuzz, overdrive, spring reverb, tape delay) are better analog than digital. So I have decided I'm going to build those analog circuits and then allow my Teensy to run signals through them (with a DAC, of course)! Resources:
+        <ul>
+            <li><a href="https://www.instructables.com/Fuzz-Pedal/">Basic fuzz pedal</a></li>
+            <li><a href="https://www.electrosmash.com/fuzz-face">Fuzz Face pedal</a></li>
+            <li><a href="https://medium.com/@gatto014/how-to-make-a-guitar-overdrive-pedal-for-absolute-beginners-d4cf3798771b">Basic overdrive pedal</a></li>
+            <li><a href="https://diy-fever.com">DIY Fever</a> for overdrive etc.</li>
+            <li>Spring reverb & tape delay require more physical components and what I'm really morre interested in is fuzzy sound so I'm not gonna put that in. But!</li>
+        </ul>
 
         <br><br>
         <a href="/">take me home</a>
