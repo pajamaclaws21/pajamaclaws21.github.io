@@ -97,8 +97,8 @@ function callSnapC(functionName, inputs, identifier){
                 value = JSON.parse(JSON.stringify(value));
                 result = value.contents.find((element) => element.contents[0] == identifier).contents[1];
                 if(result != "undefined"){
-                    alert("found content");
                     clearInterval(loop);
+                    alert("found content");
                     resolve(result);
                 }
             });
