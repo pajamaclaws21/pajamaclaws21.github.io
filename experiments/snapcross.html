@@ -53,6 +53,8 @@ window.addEventListener("load", (event) => {
 
 // when Snap! responds to API call, store it in crossOutput
 window.addEventListener('message', (event) => {
+    // I think it's not returning anything for setVar calls
+    alert(event.data.response);
     crossOutput = event.data.response;
 }, false);
 
