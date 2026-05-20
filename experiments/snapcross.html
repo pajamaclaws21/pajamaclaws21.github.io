@@ -21,10 +21,11 @@ snapAPI('getVar', ['foo']).then((response) => {alert(response)});
 <button onclick="
 
 try {
-alert(callSnapC('random', '', 'abc'));/*.then((output) => {
+callSnapC('random', '', 'abc').then((output) => {
+    alert('output');
     alert(output);
     //log.innerText += `\nThe output to ${func}:${id} was ${output}`;
-});*/
+});
 } catch (err) {alert(err)};
 
 ">Run</button>
