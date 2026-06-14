@@ -19,7 +19,7 @@
         
         function randomitem(array){return array[Math.floor(Math.random()*array.length)]}
 
-        let a = randomitem(document.getElementsByClassName('a'));
+        let a = randomitem(document.getElementsByTagName('a'));
         let href = a.href;
         window.open(href, '_blank').focus();        
         
