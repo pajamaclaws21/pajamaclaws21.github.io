@@ -98,4 +98,5 @@ function hebcal(b) {
 
 };
 
-console.log(hebcal(new Date));
+// Usage:
+// console.log(hebcal(new Date));
