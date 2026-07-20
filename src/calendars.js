@@ -104,4 +104,6 @@ let ordinal = () => { if (date.getDate() % 10 == 1) { return ("st") } else if (d
 let gregorianDate = `${dayOfWeek}, ${month} ${date.getDate()}${ordinal()}, ${date.getFullYear()}`;
 let hebrewDate = hebcal(date);
 
-document.getElementById("date").innerText = `Hello there! Today is ${gregorianDate}; ${hebrewDate}. It is the nth week of x.`;
+window.addEventListener("onload", ()=>{
+    document.getElementById("date").innerText = `Hello there! Today is ${gregorianDate}; ${hebrewDate}. It is the nth week of x.`;
+});
