@@ -1,6 +1,7 @@
 const date = new Date();
 
 // From https://www.hebcal.com/home/40/displaying-todays-hebrew-date-on-your-website
+// This code is hugely obfuscated!! If you know what it does please explain & make it more readable
 function hebcal(b) {
   const t = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
@@ -99,7 +100,7 @@ function hebcal(b) {
 
 };
 
-// mine
+// mine. replace with a switch/case statement? one of those ?: things?
 function ordinal(number) {
   if (number % 10 == 1) {
     return ("st")
@@ -123,7 +124,7 @@ function isLeapYear(year) {
   return (year % 100 === 0 ? year % 400 === 0 : year % 4 === 0);
 }
 
-// mine
+// mine --- super gross and unelegant. If you can make this elegant but readable lmk
 function thirtCal(gregorianDate) {
   let thirtMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Sol", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Year Day"];
   let thirtMonth = thirtMonths[Math.floor(daysIntoYear(gregorianDate) / 28)];
@@ -139,16 +140,20 @@ function thirtCal(gregorianDate) {
   }
 
 }
-
+// same goes here: make this elegant and readable
 let gregorMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][date.getDay()];
 let gregorMonth = gregorMonths[date.getMonth()];
+
+// generate dates to display
 let gregorianDate = `${dayOfWeek}, ${gregorMonth} ${date.getDate()}${ordinal(date.getDate())}`;
 let hebrewDate = hebcal(date);
 let thirtDate = thirtCal(date);
 
+// generate display
+let display = `Hello there! Today is ${gregorianDate} (${thirtDate}), ${hebrewDate}.`;
 
-
+// wait for window to load and then populate display
 window.addEventListener("load", (event)=>{
-    document.getElementById("date").innerText = `Hello there! Today is ${gregorianDate} (${thirtDate}), ${hebrewDate}.`;
+    document.getElementById("date").innerText = display;
 });
