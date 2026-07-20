@@ -1,3 +1,5 @@
+const date = new Date();
+
 // From https://www.hebcal.com/home/40/displaying-todays-hebrew-date-on-your-website
 function hebcal(b) {
   const t = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -97,13 +99,56 @@ function hebcal(b) {
 
 };
 
-let date = new Date();
+// mine
+function ordinal(number) {
+  if (number % 10 == 1) {
+    return ("st")
+  } else if (number % 10 == 2) {
+    return ("nd")
+  } else if (number % 10 == 3) {
+    return ("rd")
+  } else { 
+      return ("th") 
+  }
+}
+
+// From https://stackoverflow.com/a/40975730; posted by user2501097
+// Retrieved 2026-07-20, License - CC BY-SA 3.0
+function daysIntoYear(date){
+    return (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
+}
+
+// also taken from online but idk where
+function isLeapYear(year) {
+  return (year % 100 === 0 ? year % 400 === 0 : year % 4 === 0);
+}
+
+// mine
+function thirtCal(gregorianDate) {
+  let thirtMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Sol", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Year Day"];
+  let thirtMonth = thirtMonths[Math.floor(daysIntoYear(gregorianDate) / 28)];
+  let dayInThirtMonth = daysIntoYear(gregorianDate) % 28;
+  if (isLeapYear(gregorianDate.getFullYear()) && daysIntoYear == 60) {
+    thirtMonth = "Leap Day";
+    dayInThirtMonth = 1;
+    return "Leap Day";
+  } else if (thirtMonth == "Year Day") {
+    return "Year Day";
+  } else {
+    return `${thirtMonth} ${dayInThirtMonth}${ordinal(dayInThirtMonth)}`;
+  }
+
+}
+
+let gregorMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][date.getDay()];
-let month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][date.getMonth()];
-let ordinal = () => { if (date.getDate() % 10 == 1) { return ("st") } else if (date.getDate() % 10 == 2) { return ("nd") } else if (date.getDate() % 10 == 3) { return ("rd") } else { return ("th") } };
-let gregorianDate = `${dayOfWeek}, ${month} ${date.getDate()}${ordinal()}, ${date.getFullYear()}`;
+let gregorMonth = gregorMonths[date.getMonth()];
+let gregorianDate = `${dayOfWeek}, ${gregorMonth} ${date.getDate()}${ordinal(date.getDate())}`;
 let hebrewDate = hebcal(date);
+let thirtDate = thirtCal(date);
+
+
 
 window.addEventListener("load", (event)=>{
-    document.getElementById("date").innerText = `Hello there! Today is ${gregorianDate}; ${hebrewDate}. It is the nth week of x.`;
+    document.getElementById("date").innerText = `Hello there! Today is ${gregorianDate} (${thirtDate}), ${hebrewDate}.`;
 });
