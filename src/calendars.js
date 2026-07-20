@@ -1,5 +1,4 @@
 // From https://www.hebcal.com/home/40/displaying-todays-hebrew-date-on-your-website
-// feed a date
 function hebcal(b) {
   const t = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
@@ -54,9 +53,9 @@ function hebcal(b) {
   function d(t) {
     const r = t - 1, n = 235 * Math.floor(r / 19) + r % 19 * 12 + Math.floor((r % 19 * 7 + 1) / 19), e = 204 + n % 1080 * 793, o = 5 + 12 * n + 793 * Math.floor(n / 1080) + Math.floor(e / 1080), u = e % 1080 + o % 24 * 1080, f = 1 + 29 * n + Math.floor(o / 24);
     let a = f;
-    return (u >= 19440 || 2 == f % 7 && u >= 9924 && !((1 + 7 * t) % 19 < 7) || 1 == f % 7 && u >= 16789 && (1 + 7 * r) % 19 < 7) && a++, a % 7 == 0 || a % 7 == 3 || a % 7 == 5 ? a + 1 : a;
+    return (u >= 19440 || 2 == f % 7 && u >= 9924 && !((1 + 7 * t) % 19 < 7) || 1 == f % 7 && u >= 16789 && (1 + 7 * r) % 19 < 7) && a++ , a % 7 == 0 || a % 7 == 3 || a % 7 == 5 ? a + 1 : a;
   }
-  
+
   let p = function (t) {
     if ("object" != typeof (n = t) || !Date.prototype.isPrototypeOf(n)) throw new TypeError(`not a Date: ${t}`);
     if (isNaN(t.getTime())) throw new RangeError("Invalid Date");
@@ -70,23 +69,23 @@ function hebcal(b) {
   }(b);
 
   b.getHours() > 19 && p++;
-  
+
   // v returns the hebrew date object
   const v = function (t) {
     if (isNumber(t, "abs"), (t = Math.trunc(t)) <= a) throw new RangeError(`abs2hebrew: ${t} is before epoch`);
     let r = Math.floor((t - a) / 365.24682220597794);
-    for (; a + w(r) <= t;) ++r;
+    for (; a + w(r) <= t;)++r;
     --r;
     let n = t < c(r, 1, 1) ? 7 : 1;
-    for (; t > c(r, n, y(n, r));) ++n;
-    return {year: r, mm: n, day: 1 + t - c(r, n, 1)};
+    for (; t > c(r, n, y(n, r));)++n;
+    return { year: r, mm: n, day: 1 + t - c(r, n, 1) };
   }(p)
-  
+
   const month = function (t, r) {
     if (isNumber(t, "month"), isNumber(r, "year"), t < 1 || t > 14) throw new TypeError(`bad monthNum: ${t}`);
     return o[+((1 + 7 * r) % 19 < 7)][t];
   }(v.mm, v.year)
-  
+
   // appends the ordinal
   const g = function (date) {
     const ordinalSuffixes = ["th", "st", "nd", "rd"]
@@ -94,9 +93,15 @@ function hebcal(b) {
     return date + (ordinalSuffixes[(lastDigit - 20) % 10] || ordinalSuffixes[lastDigit] || "th");
   }(v.day) + " of " + month + ", " + v.year;
 
-  return(g);
+  return (g);
 
 };
 
-// Usage:
-// console.log(hebcal(new Date));
+let date = new Date();
+let dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][date.getDay()];
+let month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][date.getMonth()];
+let ordinal = () => { if (date.getDate() % 10 == 1) { return ("st") } else if (date.getDate() % 10 == 2) { return ("nd") } else if (date.getDate() % 10 == 3) { return ("rd") } else { return ("th") } };
+let gregorianDate = `${dayOfWeek}, ${month} ${date.getDate()}${ordinal()}, ${date.getFullYear()}`;
+let hebrewDate = hebcal(date);
+
+document.getElementById("date").innerText = `Hello there! Today is ${gregorianDate}; ${hebrewDate}. It is the nth week of x.`;
