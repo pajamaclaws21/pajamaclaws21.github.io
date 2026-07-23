@@ -64,23 +64,23 @@ function daysBefore(n, date) {
 
 }
 let nearestSunday = (date) => { return daysBefore(date.getDay(), date) };
+let sundayOfWeekBefore = (date) => { return nearestSunday(daysBefore(1, date)); }
 
-let year = 2011,
+let year = 2000,
     christmas = new Date(year, 11, 25),
     boy = new Date(year, 0, 1),
-    commonYearSunday = boy.getDay() == 0,
-    leapYearSaturday = boy.getDay() == 6 && isLeapYear(year);
+    //commonYearSunday = boy.getDay() == 0,
+    //leapYearSaturday = boy.getDay() == 6 && isLeapYear(year);
     // if common year sunday you need 53
     // if not common year sunday you need at least that mabny
-    numberOfSundays = commonYearSunday ? 53 : 52;
-    firstSundayOfYear = nearestSunday(boy);
-    lastSundayOfYear = nearestSunday(new Date(year, 11, 31));
+    sundayCount = 60,
+    lastSundayOfYear = nearestSunday(new Date(year, 11, 31)),
+    sundayOfFirst = nearestSunday(new Date(year, 0, 0)).toString();
 
-
-let sundayDates = range(numberOfSundays);
+let sundayDates = range(sundayCount);
 sundayDates.forEach((value, index, array) => {
   array[index] = daysBefore(7 * value, lastSundayOfYear).toString();
 });
 
-console.log(sundayDates);
-
+let firstSundayIndex = sundayDates.indexOf(sundayOfFirst);
+sundayDates.length = firstSundayIndex + 1;
