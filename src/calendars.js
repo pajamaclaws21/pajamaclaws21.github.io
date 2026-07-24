@@ -136,10 +136,15 @@ function thirtCal(gregorianDate) {
   } else if (thirtMonth == "Year Day") {
     return "Year Day";
   } else {
-    return `${thirtMonth} ${dayInThirtMonth}${ordinal(dayInThirtMonth)}`;
+    return `${thirtMonth}. ${dayInThirtMonth}${ordinal(dayInThirtMonth)}`;
   }
 
 }
+
+// happy messages, etc.
+let messages = ["Have a blessed day!", "Have a good one!", "Keep it up!"];
+let message = messages[Math.floor(Math.random()*items.length)];
+
 // same goes here: make this elegant and readable
 let gregorMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][date.getDay()];
@@ -151,7 +156,7 @@ let hebrewDate = hebcal(date);
 let thirtDate = thirtCal(date);
 
 // generate display
-let display = `Hello there! Today is ${gregorianDate} (${thirtDate}), ${hebrewDate}.`;
+let display = `Hello there! Today is ${gregorianDate} (${thirtDate}), ${hebrewDate}. ${message}`;
 
 // wait for window to load and then populate display
 window.addEventListener("load", (event)=>{
