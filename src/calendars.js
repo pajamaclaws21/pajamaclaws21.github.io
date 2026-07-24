@@ -143,7 +143,7 @@ function thirtCal(gregorianDate) {
 
 // happy messages, etc.
 let messages = ["Have a blessed day!", "Have a good one!", "Keep it up!"];
-let message = messages[Math.floor(Math.random()*items.length)];
+let message = messages[Math.floor(Math.random()*messages.length)];
 
 // same goes here: make this elegant and readable
 let gregorMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
