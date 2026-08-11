@@ -2,10 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url><loc>https://www.pajamaclaws.net/</loc></url>
 	<url><loc>https://www.pajamaclaws.net/poetry</loc></url>
+	<url><loc>https://www.pajamaclaws.net/poetry/love.html</loc></url>
 	<url><loc>https://www.pajamaclaws.net/cool.html</loc></url>
 	<url><loc>https://www.pajamaclaws.net/weblog</loc></url>
+
+	<!-- weblog entries (automatically generated) -->
+	<url><loc>https://www.pajamaclaws.net/weblog/ai.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/birthday.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/cult.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/deconstruction.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/egodeath.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/evil.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/fem.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/glossary.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/grantarot.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/guitar.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/hacker.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/internet.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/map.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/nationalism.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/pocketmage.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/semantic.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/surveillance-state.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/trasfondos.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/web3.html</loc></url>
+	<url><loc>https://www.pajamaclaws.net/weblog/winkie.html</loc></url>
+
 	<url><loc>https://www.pajamaclaws.net/webring.html</loc></url>
 	<url><loc>https://www.pajamaclaws.net/experiments</loc></url>
-	<url><loc>https://www.pajamaclaws.net/experiments/wbib3.html</loc></url>
 	<url><loc>https://www.pajamaclaws.net/experiments/episcopal-glossary.html</loc></url>
 </urlset>
