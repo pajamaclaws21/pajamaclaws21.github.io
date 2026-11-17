@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weightlifting!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta charset="utf-8">
+        <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        input {
+          width: 10vw;
+        }
+        p#your1RM {
+          font-size: 24px;
+          font-weight: 600;
+          padding: 0px;
+          margins: 0px;
+        }
+        #str-wt, #pse-wt, #pme-wt, #hyp-wt, #end-wt {
+          font-weight: 600;
+          color: blue;
+        }
+        tr:hover {
+          background-color: #eeeeff;
+        }
+        </style>
+    </head>
+    <body>
+<h1>1RM Calculator & Set Planner</h1>
+<label for="weight">Weight (lbs):</label>
+<input name="weight" type="number" min="0" id="weight" step="5" />
+<label for="reps">Reps:</label>
+<input name="reps" type="number" min="1" max="36" id="reps" />
+<button onclick="calcNDisp()">Calculate 1RM</button>
+<p id="your1RM"></p>
+
+<script>
+function calconerep(weight,reps){
+//Brzycki formula
+return Math.floor(weight * ( 36 / ( 37 - reps ) ));
+};
+
+function calcNDisp(){
+
+let weight = document.getElementById("weight").value;
+let reps = document.getElementById("reps").value;
+if (reps > 36){
+document.getElementById("your1RM").innerText = "Do less reps...";
+} else {
+let rm = calconerep(weight, reps);
+document.getElementById("your1RM").innerHTML = `Your calculated 1RM is <span style="color: blue;">${rm} lbs</span>!`;
+
+let ni = Math.floor(0.9 * rm);
+let eifi = Math.floor(0.85 * rm);
+let ei = Math.floor(0.80 * rm);
+let sefi = Math.floor(0.75 * rm);
+let sise = Math.floor(0.67 * rm);
+
+document.getElementById("str-wt").innerText = `>= ${eifi} lbs`;
+document.getElementById("pse-wt").innerText = `${ei}-${ni} lbs`;
+document.getElementById("pme-wt").innerText = `${sefi}-${eifi} lbs`;
+document.getElementById("hyp-wt").innerText = `${sise}-${eifi} lbs`;
+document.getElementById("end-wt").innerText = `<= ${sise} lbs`;
+
+
+
+
+}
+
+};
+</script>
+
+
+<table>
+
+<tr>
+<th>Goal</th>
+<th>% of 1 Rep Max</th>
+<th>Your Weight</th>
+<th>Set Range</th>
+<th>Rep Range</th>
+<th>Rest Time</th>
+</tr>
+
+<tr>
+<td>Strength</td>
+<td>>= 85%</td>
+<td id="str-wt"></td>
+<td>2-6</td>
+<td><6</td>
+<td>2-5 min</td>
+</tr>
+
+<tr>
+<td>Power, Single Effort</td>
+<td>80-90%</td>
+<td id="pse-wt"></td>
+<td>3-5</td>
+<td>1-2</td>
+<td>2-5 min</td>
+</tr>
+
+<tr>
+<td>Power, Multiple Effort</td>
+<td>75-85%</td>
+<td id="pme-wt"></td>
+<td>3-5</td>
+<td>3-5</td>
+<td>2-5 min</td>
+</tr>
+
+<tr>
+<td>Hypertrophy</td>
+<td>67-85%</td>
+<td id="hyp-wt"></td>
+<td>3-6</td>
+<td>6-12</td>
+<td>30s - 1.5min</td>
+</tr>
+
+<tr>
+<td>Endurance</td>
+<td><= 67%</td>
+<td id="end-wt"></td>
+<td>2-3</td>
+<td>12+</td>
+<td>30s</td>
+</tr>
+
+
+</table>
+    </body>
+</html>
