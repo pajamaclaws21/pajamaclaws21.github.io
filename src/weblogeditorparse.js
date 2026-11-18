@@ -5,10 +5,10 @@ function parseText(){
 <html>
     <head>
         <title>${title}</title>
-	    <link rel="manifest" href="https://www.pajamaclaws.net/manifest.json">
+        <link rel="manifest" href="https://www.pajamaclaws.net/manifest.json">
         <link rel="icon" type="image/jpg" href="https://pajamaclaws.net/images/fax-error.ico">
         <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <style>
             * {
                 font-family: 'Times New Roman', Times, serif;
