@@ -102,7 +102,9 @@ function hebcal(b) {
 
 // mine. replace with a switch/case statement? one of those ?: things?
 function ordinal(number) {
-  if (number % 10 == 1) {
+  if (number == 11 || number == 12 || number == 13) {
+    return ("th")
+  } else if (number % 10 == 1) {
     return ("st")
   } else if (number % 10 == 2) {
     return ("nd")
