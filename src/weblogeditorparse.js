@@ -21,6 +21,7 @@ function parseText(){
 
         <br><br>
         <a href="/">take me home</a>
+        </p>
     </body>
 </html>`;
 
